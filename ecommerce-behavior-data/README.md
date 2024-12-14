@@ -19,20 +19,22 @@
 1. ecommerce_behavior_data 테이블 생성 쿼리
 
 ## 사전 준비
+### Java 11 설치
 ```bash
-# scala 2.12 설치 및 환경변수 설정
-brew install scala@2.12
-vim ~/.zshrc
-echo 'export PATH="/opt/homebrew/Cellar/scala@2.12/2.12.20/bin:$PATH"' >> ~/.zshrc
-source ~/.zshrc
-
-# java 11 설치 및 환경변수 설정
 brew install openjdk@11
 vim ~/.zshrc
 echo 'export PATH="/opt/homebrew/Cellar/openjdk@11/11.0.25/bin:$PATH"' >> ~/.zshrc
 source ~/.zshrc
-
-# spark 3.5.3 설치 및 환경변수 설정
+```
+### Scala 2.12 설치
+```bash
+brew install scala@2.12
+vim ~/.zshrc
+echo 'export PATH="/opt/homebrew/Cellar/scala@2.12/2.12.20/bin:$PATH"' >> ~/.zshrc
+source ~/.zshrc
+```
+### Spark 3.5.3 설치
+```bash
 sudo mkdir /opt/spark
 sudo wget https://archive.apache.org/dist/spark/spark-3.5.3/spark-3.5.3-bin-hadoop3.tgz
 sudo tar -xvf spark-3.5.3-bin-hadoop3.tgz
@@ -40,18 +42,23 @@ sudo mv spark-3.5.3-bin-hadoop3/ /opt/spark
 echo 'export SPARK_HOME="/opt/spark"' >> ~/.zshrc
 echo 'export PATH="/opt/spark/bin:$PATH"' >> ~/.zshrc
 source ~/.zshrc
-
+```
+### Intellij
+```bash
 # intellij 설치
 ## scala plugin 설치
-## java sdk 설정
-## scala sdk 설정
 
-# build-sbt 설정: spark-core, spark-sql 추가 (scala 버전에 맞게)
+# 프로젝트 생성
+## java sdk 버전 설정
+## scala sdk 버전 설정
+
+# build-sbt 설정
+## scala 버전에 맞게 spark-core, spark-sql 추가
 libraryDependencies += "org.apache.spark" %% "spark-core" % "3.5.3"
 libraryDependencies += "org.apache.spark" %% "spark-sql" % "3.5.3" % "provided"
 
-# intellij 실행/디버깅 구성 -> "providor 범위를 가진 종속성 추가" 
-
-# 기준 데이터
-# https://www.kaggle.com/datasets/mkechinov/ecommerce-behavior-data-from-multi-category-store
+# intellij 실행/디버깅 구성
+## "'providor' 범위를 가진 종속성을 클래스 경로에 추가" 설정
 ```
+### 기준 데이터
+- https://www.kaggle.com/datasets/mkechinov/ecommerce-behavior-data-from-multi-category-store
