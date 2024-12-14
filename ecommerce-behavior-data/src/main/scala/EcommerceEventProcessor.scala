@@ -98,6 +98,7 @@ object EcommerceEventProcessor {
 
     dfWithPartitionColumns.write
       .partitionBy("year", "month", "day")
+      .option("compression", "snappy")
       .mode("overwrite")
       .parquet(writePath)
   }
