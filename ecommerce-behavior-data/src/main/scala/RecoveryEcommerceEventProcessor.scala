@@ -48,14 +48,14 @@ object RecoveryEcommerceEventProcessor {
    * @throws java.nio.file.NoSuchFileException 파일 경로가 유효하지 않을 경우 발생할 수 있습니다.
    */
   def main(args: Array[String]): Unit = {
-    val start_date = "2019-11-01"
-    val end_date = "2019-11-01"
+    val startDate = "2019-10-16"
+    val endDate = "2019-11-01"
 
     val readPath = "src/main/resources"
     val readFormat = "csv.gz"
     val writePath = "src/main/resources/ecommerce_events"
 
-    val monthlyData = generateDailyData(start_date, end_date).distinct
+    val monthlyData = generateDailyData(startDate, endDate).distinct
     val updatedMonthlyData = monthlyData.map(date => s"$readPath/$date.$readFormat")
     val filteredMonthlyData = updatedMonthlyData.filter(path => Files.exists(Paths.get(path)))
 
