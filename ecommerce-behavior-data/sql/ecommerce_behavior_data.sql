@@ -7,7 +7,8 @@ CREATE EXTERNAL TABLE `bronze`.`ecommerce_behavior_data`(
   `brand` string COMMENT '소문자로 표시된 브랜드 이름 문자열, 생략될 수 있음',
   `price` double COMMENT '상품의 가격(float), 반드시 포함됨',
   `user_id` int COMMENT '영구 사용자 ID',
-  `user_session` string COMMENT '임시 사용자 세션 ID. 각 사용자 세션마다 동일하며, 사용자가 긴 시간 동안 온라인 스토어에 다시 접속할 때마다 변경됨')
+  `user_session` string COMMENT '임시 사용자 세션 ID. 각 사용자 세션마다 동일하며, 사용자가 긴 시간 동안 온라인 스토어에 다시 접속할 때마다 변경됨',
+  `event_time_kst` timestamp COMMENT '이벤트가 발생한 시간 (KST 기준)')
 COMMENT '[데이터플랫폼] 전자상거래 행동 데이터'
 PARTITIONED BY (
   `year` string COMMENT '파티션 연도 yyyy',

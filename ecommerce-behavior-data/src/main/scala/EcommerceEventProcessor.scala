@@ -1,3 +1,4 @@
+import RecoveryEcommerceEventProcessor.generateDailyData
 import org.apache.spark.SparkConf
 import org.apache.spark.sql.functions._
 import org.apache.spark.sql.types._
@@ -7,6 +8,13 @@ import java.nio.file.{Files, Paths}
 import java.time.LocalDate
 import java.time.format.DateTimeFormatter
 import scala.collection.mutable.ListBuffer
+import org.apache.log4j.{Level, Logger}
+import org.apache.spark.sql.{DataFrame, SparkSession}
+import org.apache.spark.sql.functions._
+import org.apache.spark.sql.types._
+import org.apache.spark.SparkConf
+
+import java.nio.file.{Files, Paths}
 
 /**
  * eCommerce 플랫폼의 사용자 이벤트 데이터를 처리하는 클래스.
@@ -48,17 +56,32 @@ object EcommerceEventProcessor {
    * @throws DateTimeParseException 시작 날짜 또는 종료 날짜가 "yyyy-MM-dd" 형식이 아닐 경우 예외가 발생합니다.
    */
   def main(args: Array[String]): Unit = {
+
+    val logger = Logger.getLogger(this.getClass)
+    logger.setLevel(Level.INFO)
+    logger.info("Starting the application")
+
     val startDate = "2019-10-01"
     val endDate = "2019-11-01"
 
     val readPath = "src/main/resources"
     val readFormat = "csv.gz"
-    val writePath = "src/main/resources/ecommerce_events"
-    // val writePath = "s3://__bucket_name__/ecommerce_behavior_data/parquet"
+    val writePath = "src/main/resources/ecommerce_behavior_data/parquet"
+    // val writePath = "s3://__your_bucket_name__/ecommerce_behavior_data/parquet"
+
+    logger.info(s"Start date: $startDate, End date: $endDate")
+    logger.info(s"Read path: $readPath, Write path: $writePath")
 
     val monthlyData = generateMonthlyData(startDate, endDate)
+    logger.info(s"Generated ${monthlyData.size} daily data paths")
+
     val updatedMonthlyData = monthlyData.map(date => s"$readPath/$date.$readFormat")
-    val filteredMonthlyData = updatedMonthlyData.filter(path => Files.exists(Paths.get(path)))
+    val filteredMonthlyData = updatedMonthlyData.filter(path => {
+      val exists = Files.exists(Paths.get(path))
+      if (exists) logger.info(s"File exists: $path") else logger.warn(s"File does not exist: $path")
+      exists
+    })
+    logger.info(s"Filtered data paths count: ${filteredMonthlyData.size}")
 
     val conf = new SparkConf()
       .setMaster("local[*]")
@@ -69,9 +92,11 @@ object EcommerceEventProcessor {
       .set("spark.executor.memory", "2g")
       .set("spark.memory.fraction", "0.8")
       .set("spark.memory.storageFraction", "0.3")
-    val spark = SparkSession.builder().config(conf).getOrCreate()
 
-    val schema = StructType(Array(
+    val spark = SparkSession.builder().config(conf).getOrCreate()
+    logger.info("Spark session created")
+
+    val readSchema = StructType(Array(
       StructField("event_time", TimestampType, nullable = true),
       StructField("event_type", StringType, nullable = true),
       StructField("product_id", IntegerType, nullable = true),
@@ -83,24 +108,38 @@ object EcommerceEventProcessor {
       StructField("user_session", StringType, nullable = true)
     ))
 
-    val df: DataFrame = spark.read
-      .option("header", "true")
-      .option("delimiter", ",")
-      .schema(schema)
-      .csv(filteredMonthlyData: _*)
+    try {
+      logger.info("Reading data into DataFrame")
 
-    val dfWithKST: DataFrame = df.withColumn("event_time_kst", from_utc_timestamp(col("event_time"), "Asia/Seoul"))
+      val df: DataFrame = spark.read
+        .option("header", "true")
+        .option("delimiter", ",")
+        .schema(readSchema)
+        .csv(filteredMonthlyData: _*)
+      logger.info("DataFrame successfully read")
 
-    val dfWithPartitionColumns: DataFrame = dfWithKST
-      .withColumn("year", year(col("event_time_kst")))
-      .withColumn("month", month(col("event_time_kst")))
-      .withColumn("day", format_string("%02d", dayofmonth(col("event_time_kst"))))
+      val dfWithKST: DataFrame = df.withColumn("event_time_kst", from_utc_timestamp(col("event_time"), "Asia/Seoul"))
+      logger.info("Added KST time column")
 
-    dfWithPartitionColumns.write
-      .partitionBy("year", "month", "day")
-      .option("compression", "snappy")
-      .mode("overwrite")
-      .parquet(writePath)
+      val dfWithPartitionColumns: DataFrame = dfWithKST
+        .withColumn("year", year(col("event_time_kst")))
+        .withColumn("month", month(col("event_time_kst")))
+        .withColumn("day", format_string("%02d", dayofmonth(col("event_time_kst"))))
+      logger.info("Added partition columns (year, month, day)")
+
+      dfWithPartitionColumns.write
+        .partitionBy("year", "month", "day")
+        .option("compression", "snappy")
+        .mode("overwrite")
+        .parquet(writePath)
+      logger.info(s"Data successfully written to $writePath")
+    } catch {
+      case e: Exception =>
+        logger.error("An error occurred while processing data", e)
+    } finally {
+      spark.stop()
+      logger.info("Spark session stopped")
+    }
   }
 
   /**
