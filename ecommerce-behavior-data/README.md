@@ -43,7 +43,7 @@ echo 'export SPARK_HOME="/opt/spark"' >> ~/.zshrc
 echo 'export PATH="/opt/spark/bin:$PATH"' >> ~/.zshrc
 source ~/.zshrc
 ```
-### Intellij
+### Intellij 설치
 ```bash
 # intellij 설치
 ## scala plugin 설치
