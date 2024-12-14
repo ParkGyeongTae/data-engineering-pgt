@@ -1,4 +1,4 @@
-import RecoveryEcommerceEventProcessor.generateDailyData
+import org.apache.log4j.{Level, Logger}
 import org.apache.spark.SparkConf
 import org.apache.spark.sql.functions._
 import org.apache.spark.sql.types._
@@ -8,13 +8,6 @@ import java.nio.file.{Files, Paths}
 import java.time.LocalDate
 import java.time.format.DateTimeFormatter
 import scala.collection.mutable.ListBuffer
-import org.apache.log4j.{Level, Logger}
-import org.apache.spark.sql.{DataFrame, SparkSession}
-import org.apache.spark.sql.functions._
-import org.apache.spark.sql.types._
-import org.apache.spark.SparkConf
-
-import java.nio.file.{Files, Paths}
 
 /**
  * eCommerce 플랫폼의 사용자 이벤트 데이터를 처리하는 클래스.

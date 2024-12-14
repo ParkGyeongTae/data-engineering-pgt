@@ -5,8 +5,8 @@ import org.apache.spark.sql.types._
 import org.apache.spark.sql.{DataFrame, SparkSession}
 
 import java.nio.file.{Files, Paths}
-import java.time.{LocalDate, ZoneOffset}
 import java.time.format.DateTimeFormatter
+import java.time.{LocalDate, ZoneOffset}
 import scala.collection.mutable.ListBuffer
 
 /**
@@ -115,7 +115,7 @@ object RecoveryEcommerceEventProcessor {
 
       val dfFilteredByDate: DataFrame = dfWithKST.filter(
         col("event_time_kst") >= lit(startDate + " 00:00:00")
-        && col("event_time_kst") <= lit(endDate + " 23:59:59")
+          && col("event_time_kst") <= lit(endDate + " 23:59:59")
       )
       logger.info("Filtered data by event_time_kst within the specified date range")
 
