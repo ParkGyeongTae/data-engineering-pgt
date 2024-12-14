@@ -60,7 +60,7 @@ object EcommerceEventProcessor {
     val readPath = "src/main/resources"
     val readFormat = "csv.gz"
     val writePath = "src/main/resources/ecommerce_behavior_data/parquet"
-    // val writePath = "s3://__your_bucket_name__/ecommerce_behavior_data/parquet"
+    // val writePath = "s3://___your_bucket_name___/ecommerce_behavior_data/parquet"
 
     logger.info(s"Start date: $startDate, End date: $endDate")
     logger.info(s"Read path: $readPath, Write path: $writePath")

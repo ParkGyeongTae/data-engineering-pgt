@@ -21,7 +21,7 @@ STORED AS INPUTFORMAT
 OUTPUTFORMAT
   'org.apache.hadoop.hive.ql.io.parquet.MapredParquetOutputFormat'
 LOCATION
-  's3://__bucket_name__/ecommerce_behavior_data/parquet'
+  's3://___your_bucket_name___/ecommerce_behavior_data/parquet'
 TBLPROPERTIES (
   'classification'='parquet'
 )
