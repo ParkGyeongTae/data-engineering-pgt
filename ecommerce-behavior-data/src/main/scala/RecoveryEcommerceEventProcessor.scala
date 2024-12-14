@@ -51,8 +51,12 @@ object RecoveryEcommerceEventProcessor {
     val start_date = "2019-11-01"
     val end_date = "2019-11-01"
 
+    val readPath = "src/main/resources"
+    val readFormat = "csv.gz"
+    val writePath = "src/main/resources/ecommerce_events"
+
     val monthlyData = generateDailyData(start_date, end_date).distinct
-    val updatedMonthlyData = monthlyData.map(date => s"src/main/resources/$date.csv.gz")
+    val updatedMonthlyData = monthlyData.map(date => s"$readPath/$date.$readFormat")
     val filteredMonthlyData = updatedMonthlyData.filter(path => Files.exists(Paths.get(path)))
 
     val conf = new SparkConf()
@@ -94,7 +98,7 @@ object RecoveryEcommerceEventProcessor {
     dfWithPartitionColumns.write
       .partitionBy("year", "month", "day")
       .mode("overwrite")
-      .parquet("src/main/resources/ecommerce_events")
+      .parquet(writePath)
   }
 
   /**

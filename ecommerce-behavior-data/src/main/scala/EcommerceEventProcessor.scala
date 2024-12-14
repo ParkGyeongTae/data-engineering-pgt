@@ -50,11 +50,15 @@ object EcommerceEventProcessor {
    * @throws DateTimeParseException 시작 날짜 또는 종료 날짜가 "yyyy-MM-dd" 형식이 아닐 경우 예외가 발생합니다.
    */
   def main(args: Array[String]): Unit = {
-    val start_date = "2019-10-01"
-    val end_date = "2019-11-01"
+    val startDate = "2019-10-01"
+    val endDate = "2019-11-01"
 
-    val monthlyData = generateMonthlyData(start_date, end_date)
-    val updatedMonthlyData = monthlyData.map(date => s"src/main/resources/$date.csv.gz")
+    val readPath = "src/main/resources"
+    val readFormat = "csv.gz"
+    val writePath = "src/main/resources/ecommerce_events"
+
+    val monthlyData = generateMonthlyData(startDate, endDate)
+    val updatedMonthlyData = monthlyData.map(date => s"$readPath/$date.$readFormat")
     val filteredMonthlyData = updatedMonthlyData.filter(path => Files.exists(Paths.get(path)))
 
     val conf = new SparkConf()
@@ -96,7 +100,7 @@ object EcommerceEventProcessor {
     dfWithPartitionColumns.write
       .partitionBy("year", "month", "day")
       .mode("overwrite")
-      .parquet("src/main/resources/ecommerce_events")
+      .parquet(writePath)
   }
 
   /**
