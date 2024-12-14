@@ -95,7 +95,7 @@ object EcommerceEventProcessor {
     val dfWithPartitionColumns: DataFrame = dfWithKST
       .withColumn("year", year(col("event_time_kst")))
       .withColumn("month", month(col("event_time_kst")))
-      .withColumn("day", dayofmonth(col("event_time_kst")))
+      .withColumn("day", format_string("%02d", dayofmonth(col("event_time_kst"))))
 
     dfWithPartitionColumns.write
       .partitionBy("year", "month", "day")
