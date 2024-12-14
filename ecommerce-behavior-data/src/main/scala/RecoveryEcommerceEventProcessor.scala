@@ -22,7 +22,7 @@ import scala.collection.mutable.ListBuffer
  * - UTC 기준 이벤트 시간을 KST로 변환합니다.
  * - 데이터를 연도, 월, 일 기준으로 파티셔닝하여 Parquet 형식으로 저장합니다.
  *
- * @throws DateTimeParseException 시작 날짜 또는 종료 날짜가 "yyyy-MM-dd" 형식이 아닐 경우 발생합니다.
+ * @throws DateTimeParseException            시작 날짜 또는 종료 날짜가 "yyyy-MM-dd" 형식이 아닐 경우 발생합니다.
  * @throws java.nio.file.NoSuchFileException 파일 경로가 유효하지 않을 경우 발생할 수 있습니다.
  */
 object RecoveryEcommerceEventProcessor {
@@ -43,8 +43,7 @@ object RecoveryEcommerceEventProcessor {
    * 6. 변환된 데이터를 연도, 월, 일 기준으로 파티셔닝하여 Parquet 형식으로 저장합니다.
    *
    * @param args 명령줄 인자를 처리하지만, 현재는 사용되지 않습니다.
-   *
-   * @throws DateTimeParseException 시작 날짜 또는 종료 날짜가 "yyyy-MM-dd" 형식이 아닐 경우 발생합니다.
+   * @throws DateTimeParseException            시작 날짜 또는 종료 날짜가 "yyyy-MM-dd" 형식이 아닐 경우 발생합니다.
    * @throws java.nio.file.NoSuchFileException 파일 경로가 유효하지 않을 경우 발생할 수 있습니다.
    */
   def main(args: Array[String]): Unit = {
@@ -54,6 +53,7 @@ object RecoveryEcommerceEventProcessor {
     val readPath = "src/main/resources"
     val readFormat = "csv.gz"
     val writePath = "src/main/resources/ecommerce_events"
+    // val writePath = "s3://__bucket_name__/ecommerce_behavior_data/parquet"
 
     val monthlyData = generateDailyData(startDate, endDate).distinct
     val updatedMonthlyData = monthlyData.map(date => s"$readPath/$date.$readFormat")
@@ -108,10 +108,9 @@ object RecoveryEcommerceEventProcessor {
    * 각 날짜는 UTC 기준에서 9시간을 뺀 시간으로 조정됩니다. 결과는 "yyyy-MMM" 형식으로 반환됩니다.
    *
    * @param startDate 시작 날짜를 나타내는 문자열. "yyyy-MM-dd" 형식으로 제공되어야 합니다.
-   * @param endDate 종료 날짜를 나타내는 문자열. "yyyy-MM-dd" 형식으로 제공되어야 합니다.
+   * @param endDate   종료 날짜를 나타내는 문자열. "yyyy-MM-dd" 형식으로 제공되어야 합니다.
    * @return 시작 날짜와 종료 날짜 사이의 일별 데이터를 나타내는 문자열 리스트.
    *         각 날짜는 "yyyy-MMM" 형식으로 포맷됩니다.
-   *
    * @throws DateTimeParseException 입력된 날짜가 "yyyy-MM-dd" 형식이 아닐 경우 예외를 발생시킵니다.
    */
   private def generateDailyData(startDate: String, endDate: String): List[String] = {

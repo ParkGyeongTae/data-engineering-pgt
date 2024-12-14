@@ -24,7 +24,6 @@ import scala.collection.mutable.ListBuffer
  * - 데이터를 연도, 월, 일 기준으로 파티셔닝하여 저장.
  *
  * @param args 명령줄 인자로 전달된 값을 처리합니다. 기본적으로는 사용되지 않습니다.
- *
  * @throws DateTimeParseException 시작 날짜 또는 종료 날짜가 잘못된 형식("yyyy-MM-dd")으로 제공될 경우 예외가 발생할 수 있습니다.
  */
 object EcommerceEventProcessor {
@@ -46,7 +45,6 @@ object EcommerceEventProcessor {
    * "src/main/resources/ecommerce_events" 디렉토리에 Parquet 형식으로 저장됩니다.
    *
    * @param args 명령줄 인자. 현재 이 메서드에서는 사용하지 않습니다.
-   *
    * @throws DateTimeParseException 시작 날짜 또는 종료 날짜가 "yyyy-MM-dd" 형식이 아닐 경우 예외가 발생합니다.
    */
   def main(args: Array[String]): Unit = {
@@ -56,6 +54,7 @@ object EcommerceEventProcessor {
     val readPath = "src/main/resources"
     val readFormat = "csv.gz"
     val writePath = "src/main/resources/ecommerce_events"
+    // val writePath = "s3://__bucket_name__/ecommerce_behavior_data/parquet"
 
     val monthlyData = generateMonthlyData(startDate, endDate)
     val updatedMonthlyData = monthlyData.map(date => s"$readPath/$date.$readFormat")
