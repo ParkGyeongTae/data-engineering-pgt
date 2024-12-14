@@ -38,14 +38,14 @@ echo 'export PATH="/opt/spark/bin:$PATH"' >> ~/.zshrc
 source ~/.zshrc
 
 # intellij 설치
-# scala plugin 설치
-# java sdk 설정
-# scala sdk 설정
+## scala plugin 설치
+## java sdk 설정
+## scala sdk 설정
+
 # build-sbt 설정: spark-core, spark-sql 추가 (scala 버전에 맞게)
-# https://mvnrepository.com/artifact/org.apache.spark/spark-core
 libraryDependencies += "org.apache.spark" %% "spark-core" % "3.5.3"
-# https://mvnrepository.com/artifact/org.apache.spark/spark-sql
 libraryDependencies += "org.apache.spark" %% "spark-sql" % "3.5.3" % "provided"
+
 # intellij 실행/디버깅 구성 -> "providor 범위를 가진 종속성 추가" 
 
 # 기준 데이터
