@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="e9976953-3f03-4c6d-bb40-949bcb6e44ee" name="변경" comment="자바강의">
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java-startt/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java-startt/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java-startt/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java-startt/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java-startt/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java-startt/java-start.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java-startt/src/CommentJava.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java-startt/src/HelloJava.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java-startt/src/HelloJava2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java-startt/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java-startt/src/operator/Comp1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java-startt/src/operator/Comp2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java-startt/src/operator/Logical1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java-startt/src/operator/Logical2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java-startt/src/operator/Operator1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java-startt/src/operator/Operator2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java-startt/src/operator/Operator3.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java-startt/src/operator/Operator4.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java-startt/src/operator/OperatorAdd1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java-startt/src/operator/OperatorAdd2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java-startt/src/variable/Var1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java-startt/src/variable/Var2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java-startt/src/variable/Var3.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java-startt/src/variable/Var4.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java-startt/src/variable/Var5.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java-startt/src/variable/Var6.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java-startt/src/variable/Var7.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java-startt/src/variable/Var8.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java-startt/src/variable/ex/VarEx1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java-startt/src/variable/ex/VarEx1Question.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java-startt/src/variable/ex/VarEx2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java-startt/src/variable/ex/VarEx3.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;ParkGyeongTae&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/ParkGyeongTae/data-engineering-pgt.git&quot;,
+    &quot;accountId&quot;: &quot;e52e1e04-0060-43e2-9af3-0bbf0f5b0705&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
+  <component name="ProjectId" id="2sA01mBqkAABV3WePCBeDBGvPzh" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/pgt0409/Desktop/git/data-engineering-pgt/online-course/java-start",
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
+    "애플리케이션.CommentJava.executor": "Run",
+    "애플리케이션.Comp1.executor": "Run",
+    "애플리케이션.Comp2.executor": "Run",
+    "애플리케이션.HelloJava.executor": "Run",
+    "애플리케이션.HelloJava2.executor": "Run",
+    "애플리케이션.Logical1.executor": "Run",
+    "애플리케이션.Logical2.executor": "Run",
+    "애플리케이션.Main.executor": "Run",
+    "애플리케이션.Operator1.executor": "Run",
+    "애플리케이션.Operator2.executor": "Run",
+    "애플리케이션.Operator3.executor": "Run",
+    "애플리케이션.Operator4.executor": "Run",
+    "애플리케이션.OperatorAdd1.executor": "Run",
+    "애플리케이션.OperatorAdd2.executor": "Run",
+    "애플리케이션.Var1.executor": "Run",
+    "애플리케이션.Var2.executor": "Run",
+    "애플리케이션.Var3.executor": "Run",
+    "애플리케이션.Var5.executor": "Run",
+    "애플리케이션.Var7.executor": "Run",
+    "애플리케이션.Var8.executor": "Run",
+    "애플리케이션.VarEx1Question.executor": "Run",
+    "애플리케이션.VarEx2.executor": "Run",
+    "애플리케이션.VarEx3.executor": "Run"
+  }
+}]]></component>
+  <component name="RunManager" selected="애플리케이션.Logical1">
+    <configuration name="Comp1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="operator.Comp1" />
+      <module name="java-start" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="operator.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Comp2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="operator.Comp2" />
+      <module name="java-start" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="operator.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Logical1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="operator.Logical1" />
+      <module name="java-start" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="operator.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Logical2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="operator.Logical2" />
+      <module name="java-start" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="operator.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OperatorAdd2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="operator.OperatorAdd2" />
+      <module name="java-start" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="operator.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="애플리케이션.Logical1" />
+        <item itemvalue="애플리케이션.Logical2" />
+        <item itemvalue="애플리케이션.Comp2" />
+        <item itemvalue="애플리케이션.Comp1" />
+        <item itemvalue="애플리케이션.OperatorAdd2" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="애플리케이션 수준" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="디폴트 작업">
+      <changelist id="e9976953-3f03-4c6d-bb40-949bcb6e44ee" name="변경" comment="" />
+      <created>1737882862120</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1737882862120</updated>
+    </task>
+    <task id="LOCAL-00001" summary="자바강의">
+      <option name="closed" value="true" />
+      <created>1737887675916</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1737887675916</updated>
+    </task>
+    <task id="LOCAL-00002" summary="자바강의">
+      <option name="closed" value="true" />
+      <created>1737891768572</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1737891768572</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/.." />
+    </ignored-roots>
+    <MESSAGE value="자바강의" />
+    <option name="LAST_COMMIT_MESSAGE" value="자바강의" />
+  </component>
+</project>
