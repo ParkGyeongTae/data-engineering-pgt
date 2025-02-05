@@ -1,5 +1,7 @@
 package hello.hello_spring.controller;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -9,9 +11,21 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 public class HelloController {
 
+    private final Logger logger = LoggerFactory.getLogger(getClass());
+
     @GetMapping("hello")
     public String hello(Model model) {
+        String methodName = new Object() {}.getClass().getEnclosingMethod().getName();
+
+        logger.info("[{}] Start: Handling GET request for /hello", methodName);
+        double startTime = System.currentTimeMillis();
+
         model.addAttribute("data", "spring!!!!");
+
+        logger.info("[{}] End: Returning 'hello' view", methodName);
+        double endTime = System.currentTimeMillis();
+        logger.info("[{}] Execution Time: {} ms", methodName, (endTime - startTime));
+
         return "hello";
     }
 
