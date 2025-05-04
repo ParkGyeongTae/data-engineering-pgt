@@ -11,3 +11,6 @@ network.host: 0.0.0.0
 # xpack.license.self_generated.type: trial
 xpack.security.enabled: false
 xpack.monitoring.collection.enabled: false
+
+# 처음에 실행하면 .geoip_databases 인덱스가 자동생성 되는데, 이 옵션을 주면 제거할 수 있음.
+ingest.geoip.downloader.enabled: false
