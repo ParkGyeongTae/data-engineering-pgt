@@ -1,0 +1,60 @@
+services:
+    
+  elasticsearch:
+    hostname: elasticsearch
+    container_name: elasticsearch
+    image: docker.io/elasticsearch:7.14.0
+    volumes:
+      - type: bind
+        source: ./elasticsearch/config/elasticsearch.yml
+        target: /usr/share/elasticsearch/config/elasticsearch.yml
+        read_only: false
+    ports:
+      - "9200:9200"
+      - "9300:9300"
+    environment:
+      ES_JAVA_OPTS: "-Xmx1024m -Xms1024m"
+      discovery.type: single-node
+
+  # logstash:
+  #   hostname: logstash
+  #   container_name: logstash
+  #   image: docker.io/logstash:7.14.0
+  #   volumes:
+  #     - type: bind
+  #       source: ./logstash/config/logstash.yml
+  #       target: /usr/share/logstash/config/logstash.yml
+  #       read_only: false
+  #     - type: bind
+  #       source: ./logstash/pipeline
+  #       target: /usr/share/logstash/pipeline
+  #       read_only: false
+  #     - type: bind
+  #       source: ./logstash/config/pipelines.yml
+  #       target: /usr/share/logstash/config/pipelines.yml
+  #       read_only: false
+  #     - type: bind
+  #       source: ./logstash/test
+  #       target: /usr/share/logstash/test
+  #       read_only: false
+  #   ports:
+  #     - "5044:5044"
+  #     - "5000:5000/tcp"
+  #     - "5000:5000/udp"
+  #     - "9600:9600"
+  #   environment:
+  #     LS_JAVA_OPTS: "-Xmx1024m -Xms1024m"
+
+  # kibana:
+  #   hostname: kibana
+  #   container_name: kibana
+  #   image: docker.io/kibana:7.14.0
+  #   volumes:
+  #     - type: bind
+  #       source: ./kibana/config/kibana.yml
+  #       target: /usr/share/kibana/config/kibana.yml
+  #       read_only: false
+  #   ports:
+  #     - "5601:5601"
+  #   depends_on:
+  #     - elasticsearch

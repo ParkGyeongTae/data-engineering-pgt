@@ -1,0 +1,30 @@
+# This file is where you define your pipelines. You can define multiple.
+# For more information on multiple pipelines, see the documentation:
+#   https://www.elastic.co/guide/en/logstash/current/multiple-pipelines.html
+
+- pipeline.id: 0_api_file
+  path.config: "/usr/share/logstash/pipeline/0_api_file.conf"
+
+# - pipeline.id: 1_api_minio
+#   path.config: "/usr/share/logstash/pipeline/1_api_minio.conf"
+
+# - pipeline.id: 2_minio_file
+#   path.config: "/usr/share/logstash/pipeline/2_minio_file.conf"
+
+# - pipeline.id: 3_api_kafka
+#   path.config: "/usr/share/logstash/pipeline/3_api_kafka.conf"
+
+# - pipeline.id: 4_api_es
+#   path.config: "/usr/share/logstash/pipeline/4_api_es.conf"
+
+# - pipeline.id: 5_file_minio
+#   path.config: "/usr/share/logstash/pipeline/5_file_minio.conf"
+
+# - pipeline.id: 7_file_minio
+#   path.config: "/usr/share/logstash/pipeline/7_api_file.conf"
+
+# - pipeline.id: 8_api_minio
+#   path.config: "/usr/share/logstash/pipeline/8_api_minio.conf"
+
+# - pipeline.id: 9_api_kafka_busan
+#   path.config: "/usr/share/logstash/pipeline/9_api_kafka_busan.conf"
