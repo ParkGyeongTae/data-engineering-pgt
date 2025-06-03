@@ -10,6 +10,9 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      # channel-priority: true → flexible (기본값)
+      # channel-priority: strict → 엄격히 우선순위 적용 (권장)
+      # channel-priority: false → 전혀 우선순위 적용 안 함 
       - name: Setup conda environment with python 3.9 and R
         uses: conda-incubator/setup-miniconda@v3
         with:
@@ -17,7 +20,7 @@ jobs:
           environment-file: testing/env_python_3_with_R_and_tensorflow.yml
           python-version: 3.9
           channels: conda-forge,defaults
-          channel-priority: true
+          channel-priority: strict
           auto-activate-base: false
           use-mamba: true
 
