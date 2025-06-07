@@ -87,8 +87,10 @@ jobs:
           sudo rm -f /usr/bin/google-chrome /usr/bin/chromedriver
 
           # 2. Install Chrome 125
-          wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-          sudo apt install -y ./google-chrome-stable_current_amd64.deb
+          wget https://edgedl.me.gvt1.com/edgedl/chrome/chrome-for-testing/125.0.6422.60/linux64/chrome-linux64.zip
+          unzip chrome-linux64.zip
+          sudo mv chrome-linux64 /opt/chrome125
+          sudo ln -sf /opt/chrome125/chrome /usr/bin/google-chrome
 
           # 3. Install ChromeDriver 125 (matching version)
           wget https://edgedl.me.gvt1.com/edgedl/chrome/chrome-for-testing/125.0.6422.60/linux64/chromedriver-linux64.zip
