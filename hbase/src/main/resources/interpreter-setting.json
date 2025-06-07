@@ -1,0 +1,20 @@
+[
+  {
+    "group": "hbase",
+    "name": "hbase",
+    "className": "org.apache.zeppelin.hbase.HbaseInterpreter",
+    "properties": {
+      "hbase.home": {
+        "envName": "HBASE_HOME",
+        "propertyName": "hbase.home",
+        "defaultValue": "/usr/lib/hbase/",
+        "description": "Installation directory of HBase",
+        "type": "string"
+      }
+    },
+    "editor": {
+      "editOnDblClick": false,
+      "completionSupport": false
+    }
+  }
+]
