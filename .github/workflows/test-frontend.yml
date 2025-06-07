@@ -82,23 +82,23 @@ jobs:
         run: |
           set -ex
 
-          # 1. Remove existing Chrome and ChromeDriver (if any)
+          echo "Removing existing Chrome and ChromeDriver"
           sudo apt-get remove -y google-chrome-stable || true
           sudo rm -f /usr/bin/google-chrome /usr/bin/chromedriver
 
-          # 2. Install Chrome 125
+          echo "Installing Chrome 125"
           wget https://edgedl.me.gvt1.com/edgedl/chrome/chrome-for-testing/125.0.6422.60/linux64/chrome-linux64.zip
           unzip chrome-linux64.zip
           sudo mv chrome-linux64 /opt/chrome125
           sudo ln -sf /opt/chrome125/chrome /usr/bin/google-chrome
 
-          # 3. Install ChromeDriver 125 (matching version)
+          echo "Installing ChromeDriver 125"
           wget https://edgedl.me.gvt1.com/edgedl/chrome/chrome-for-testing/125.0.6422.60/linux64/chromedriver-linux64.zip
           unzip chromedriver-linux64.zip
           sudo mv chromedriver-linux64/chromedriver /usr/bin/chromedriver
           sudo chmod +x /usr/bin/chromedriver
 
-          # 4. Check versions
+          echo "Chrome version:"
           google-chrome --version
           chromedriver --version
 
