@@ -1,31 +1,32 @@
-name: test-conda-env
+# Apache Zeppelin 에러 조치 테스트용
+# name: test-conda-env
 
-on:
-  workflow_dispatch:
+# on:
+#   workflow_dispatch:
 
-jobs:
-  setup-conda:
-    runs-on: ubuntu-24.04
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+# jobs:
+#   setup-conda:
+#     runs-on: ubuntu-24.04
+#     steps:
+#       - name: Checkout repository
+#         uses: actions/checkout@v4
 
-      # channel-priority: true → flexible (기본값)
-      # channel-priority: strict → 엄격히 우선순위 적용 (권장)
-      # channel-priority: false → 전혀 우선순위 적용 안 함 
-      - name: Setup conda environment with python 3.9 and R
-        uses: conda-incubator/setup-miniconda@v3
-        with:
-          activate-environment: python_3_with_R_and_tensorflow
-          environment-file: testing/env_python_3_with_R_and_tensorflow.yml
-          python-version: 3.9
-          channels: conda-forge,defaults
-          channel-priority: strict
-          auto-activate-base: false
-          use-mamba: true
+#       # channel-priority: true → flexible (기본값)
+#       # channel-priority: strict → 엄격히 우선순위 적용 (권장)
+#       # channel-priority: false → 전혀 우선순위 적용 안 함 
+#       - name: Setup conda environment with python 3.9 and R
+#         uses: conda-incubator/setup-miniconda@v3
+#         with:
+#           activate-environment: python_3_with_R_and_tensorflow
+#           environment-file: testing/env_python_3_with_R_and_tensorflow.yml
+#           python-version: 3.9
+#           channels: conda-forge,defaults
+#           channel-priority: strict
+#           auto-activate-base: false
+#           use-mamba: true
 
-      - name: Verify environment is activated
-        run: |
-          which python
-          python --version
-          conda info --envs
+#       - name: Verify environment is activated
+#         run: |
+#           which python
+#           python --version
+#           conda info --envs
