@@ -160,8 +160,7 @@ public class WebDriverManager implements Closeable {
 
     // driver.manage().window().maximize();
     driver.manage().window().setPosition(new Point(0, 0));
-    // driver.manage().window().setSize(new Dimension(1600, 1024));
-    driver.manage().window().setSize(new Dimension(1920, 1080));
+    driver.manage().window().setSize(new Dimension(2048, 1152));
 
     return driver;
   }
