@@ -71,12 +71,12 @@ jobs:
         run: |
           ./mvnw clean install -DskipTests -am -pl zeppelin-integration -Pweb-classic -Pintegration -Pspark-scala-2.12 -Pspark-3.4 -Pweb-dist ${MAVEN_ARGS}
 
-      # - name: Print Chrome and ChromeDriver version
-      #   run: |
-      #     echo "Chrome version:"
-      #     google-chrome --version || chromium-browser --version || echo "Chrome not found"
-      #     echo "ChromeDriver version:"
-      #     chromedriver --version || echo "ChromeDriver not found"
+      - name: Print Chrome and ChromeDriver version
+        run: |
+          echo "Chrome version:"
+          google-chrome --version || chromium-browser --version || echo "Chrome not found"
+          echo "ChromeDriver version:"
+          chromedriver --version || echo "ChromeDriver not found"
 
       # - name: Downgrade to Chrome & ChromeDriver 125
       #   run: |
