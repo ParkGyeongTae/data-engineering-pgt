@@ -81,7 +81,7 @@ jobs:
       - name: run tests
         run: |
           export CHROME_HEADLESS=1
-          xvfb-run --auto-servernum --server-args="-screen 0 1920x1080x24" ./mvnw verify -DfailIfNoTests=false -pl zeppelin-integration -Pweb-classic -Pintegration -Pspark-scala-2.12 -Pspark-3.4 -Pweb-dist -Pusing-source-tree ${MAVEN_ARGS}
+          xvfb-run --auto-servernum --server-args="-screen 0 1440x900x24" ./mvnw verify -DfailIfNoTests=false -pl zeppelin-integration -Pweb-classic -Pintegration -Pspark-scala-2.12 -Pspark-3.4 -Pweb-dist -Pusing-source-tree ${MAVEN_ARGS}
 
       - name: Print zeppelin logs
         if: always()
