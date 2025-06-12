@@ -30,6 +30,7 @@ import java.util.stream.Stream;
 
 import org.apache.commons.lang3.SystemUtils;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Point;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
@@ -159,9 +160,7 @@ public class WebDriverManager implements Closeable {
 
     // driver.manage().window().maximize();
     driver.manage().window().setPosition(new Point(0, 0));
-    // driver.manage().window().setSize(new Dimension(1024, 768));
     driver.manage().window().setSize(new Dimension(1600, 1024));
-    // driver.manage().window().setSize(new Dimension(1920, 1080));
 
     return driver;
   }
