@@ -89,7 +89,8 @@ jobs:
           # xvfb-run --auto-servernum --server-args="-screen 0 3840x2160x24" ./mvnw verify -DfailIfNoTests=false -pl zeppelin-integration -Pweb-classic -Pintegration -Pspark-scala-2.12 -Pspark-3.4 -Pweb-dist -Pusing-source-tree ${MAVEN_ARGS}
           # xvfb-run --auto-servernum --server-args="-screen 0 1680x1050x24" ./mvnw verify -DfailIfNoTests=false -pl zeppelin-integration -Pweb-classic -Pintegration -Pspark-scala-2.12 -Pspark-3.4 -Pweb-dist -Pusing-source-tree ${MAVEN_ARGS}
           # xvfb-run --auto-servernum --server-args="-screen 0 1680x1200x24" ./mvnw verify -DfailIfNoTests=false -pl zeppelin-integration -Pweb-classic -Pintegration -Pspark-scala-2.12 -Pspark-3.4 -Pweb-dist -Pusing-source-tree ${MAVEN_ARGS}
-          xvfb-run --auto-servernum --server-args="-screen 0 1680x1440x24" ./mvnw verify -DfailIfNoTests=false -pl zeppelin-integration -Pweb-classic -Pintegration -Pspark-scala-2.12 -Pspark-3.4 -Pweb-dist -Pusing-source-tree ${MAVEN_ARGS}
+          # xvfb-run --auto-servernum --server-args="-screen 0 1680x1440x24" ./mvnw verify -DfailIfNoTests=false -pl zeppelin-integration -Pweb-classic -Pintegration -Pspark-scala-2.12 -Pspark-3.4 -Pweb-dist -Pusing-source-tree ${MAVEN_ARGS}
+          xvfb-run --auto-servernum --server-args="-screen 0 1680x1600x24" ./mvnw verify -DfailIfNoTests=false -pl zeppelin-integration -Pweb-classic -Pintegration -Pspark-scala-2.12 -Pspark-3.4 -Pweb-dist -Pusing-source-tree ${MAVEN_ARGS}
 
       - name: Print zeppelin logs
         if: always()
