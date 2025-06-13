@@ -86,7 +86,7 @@ public class WebDriverManager implements Closeable {
       try {
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--headless=new");
-        options.addArguments("--window-size=1280,800");
+        options.addArguments("--window-size=1280,720");
         options.addArguments("--disable-gpu");
         options.addArguments("--no-sandbox");
         options.addArguments("--disable-dev-shm-usage");
@@ -165,7 +165,7 @@ public class WebDriverManager implements Closeable {
 
     // driver.manage().window().maximize();
     driver.manage().window().setPosition(new Point(0, 0));
-    driver.manage().window().setSize(new Dimension(1280, 800));
+    driver.manage().window().setSize(new Dimension(1280, 720));
 
     return driver;
   }
