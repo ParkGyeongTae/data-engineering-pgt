@@ -17,6 +17,7 @@ env:
   SPARK_LOCAL_IP: 127.0.0.1
   ZEPPELIN_LOCAL_IP: 127.0.0.1
   INTERPRETERS: '!hbase,!jdbc,!file,!flink,!cassandra,!elasticsearch,!bigquery,!alluxio,!livy,!groovy,!java,!neo4j,!sparql,!mongodb'
+  ZEPPELIN_SELENIUM_BROWSER: firefox
 
 permissions:
   contents: read # to fetch code (actions/checkout)
@@ -27,65 +28,7 @@ jobs:
     defaults:
       run:
         shell: bash -l {0}
-    # steps:
-    #   - name: Checkout
-    #     uses: actions/checkout@v4
 
-    #   - name: Tune Runner VM
-    #     uses: ./.github/actions/tune-runner-vm
-
-    #   - name: Set up JDK 11
-    #     uses: actions/setup-java@v4
-    #     with:
-    #       distribution: 'temurin'
-    #       java-version: 11
-
-    #   - name: Cache local Maven repository
-    #     uses: actions/cache@v4
-    #     with:
-    #       path: |
-    #         ~/.m2/repository
-    #         !~/.m2/repository/org/apache/zeppelin/
-    #         ~/.spark-dist
-    #         ~/.cache
-    #       key: ${{ runner.os }}-zeppelin-${{ hashFiles('**/pom.xml') }}
-    #       restore-keys: |
-    #         ${{ runner.os }}-zeppelin-
-
-    #   - name: Setup conda environment with python 3.9 and R
-    #     uses: conda-incubator/setup-miniconda@v3
-    #     with:
-    #       activate-environment: python_3_with_R
-    #       environment-file: testing/env_python_3_with_R.yml
-    #       python-version: 3.9
-    #       channels: conda-forge,defaults
-    #       channel-priority: strict
-    #       auto-activate-base: false
-    #       use-mamba: true
-
-    #   - name: Make IRkernel available to Jupyter
-    #     run: |
-    #       R -e "IRkernel::installspec()"
-
-    #   - name: Install Environment
-    #     run: |
-    #       ./mvnw clean install -DskipTests -am -pl zeppelin-integration -Pweb-classic -Pintegration -Pspark-scala-2.12 -Pspark-3.4 -Pweb-dist ${MAVEN_ARGS}
-
-    #   - name: Print Chrome and ChromeDriver version
-    #     run: |
-    #       echo "Chrome version:"
-    #       google-chrome --version || chromium-browser --version || echo "Chrome not found"
-    #       echo "ChromeDriver version:"
-    #       chromedriver --version || echo "ChromeDriver not found"
-
-    #   - name: run tests
-    #     run: |
-    #       export CHROME_HEADLESS=1
-    #       xvfb-run --auto-servernum --server-args="-screen 0 1920x1280x24" ./mvnw verify -DfailIfNoTests=false -pl zeppelin-integration -Pweb-classic -Pintegration -Pspark-scala-2.12 -Pspark-3.4 -Pweb-dist -Pusing-source-tree ${MAVEN_ARGS}
-
-    #   - name: Print zeppelin logs
-    #     if: always()
-    #     run: if [ -d "logs" ]; then cat logs/*; fi
     steps:
       - name: Checkout
         uses: actions/checkout@v4
