@@ -161,7 +161,7 @@ public class WebDriverManager implements Closeable {
     try {
       driver.manage().window().maximize();
     } catch (Exception e) {
-      LOG.warn("Failed to maximize Firefox window. Consider using setSize instead.", e);
+      LOG.warn("Failed to maximize browser window. Consider using setSize() instead.", e);
     }
 
     return driver;
