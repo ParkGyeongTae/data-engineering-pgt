@@ -81,17 +81,16 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-zeppelin-
 
-      - name: Build (server + web)
+      - name: Build & install all needed (populate ~/.m2)
         run: |
-          ./mvnw -B -DskipTests -Pweb-classic -Pspark-scala-2.12 -Pspark-3.4 -Pweb-dist -pl zeppelin-server -am clean package
+          ./mvnw -B clean install -DskipTests -Pweb-classic -Pspark-scala-2.12 -Pweb-dist -Pweb-keys
 
-      - name: Run headless e2e
+      - name: Run headless e2e for zeppelin-web
         run: |
           xvfb-run --auto-servernum --server-args="-screen 0 1024x768x24" \
             ./mvnw -B verify \
               -pl zeppelin-web \
-              -Pweb-classic -Pspark-scala-2.12 -Pspark-3.4 -Pweb-dist -Pweb-e2e \
-              -Dwebdriver.chrome.driver=/usr/bin/google-chrome
+              -Pweb-classic -Pweb-dist -Pweb-e2e
 
       - name: Print zeppelin logs
         if: always()
