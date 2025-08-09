@@ -64,13 +64,13 @@ public abstract class FileInterpreter extends Interpreter {
 
     public CommandArgs(String cmd) {
       input = cmd;
-      args = new ArrayList();
-      flags = new HashSet();
+      args = new ArrayList<>();
+      flags = new HashSet<>();
     }
 
     private void parseArg(String arg) {
       if (arg.charAt(0) == '-') {                   // handle flags
-        for (int i = 0; i < arg.length(); i++) {
+        for (int i = 1; i < arg.length(); i++) {
           Character c = arg.charAt(i);
           flags.add(c);
         }

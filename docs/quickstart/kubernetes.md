@@ -70,19 +70,19 @@ Next, we will build our `zeppelin-server` image:
 
 ```sh
 cd scripts/docker/zeppelin-server
-# Looking at the "./pom.xml" we can see the version is 0.12.0-SNAPSHOT
+# Looking at the "./pom.xml" we can see the version is 0.13.0-SNAPSHOT
 # Let's set the correct version in our Dockerfile:
 # vi Dockerfile
-# ARG version="0.12.0-SNAPSHOT"
+# ARG version="0.13.0-SNAPSHOT"
 # Once you saved the Dockerfile with the correct version we can build our image:
-docker build -t zeppelin-server:0.12.0-SNAPSHOT -f ./Dockerfile .
+docker build -t zeppelin-server:0.13.0-SNAPSHOT -f ./Dockerfile .
 ```
 
 The last image we build is `zeppelin-interpreter`:
 
 ```sh
 cd scripts/docker/zeppelin-interpreter
-docker build -t zeppelin-interpreter:0.12.0-SNAPSHOT -f ./Dockerfile .
+docker build -t zeppelin-interpreter:0.13.0-SNAPSHOT -f ./Dockerfile .
 ```
 
 So we should now have the following images:
@@ -92,8 +92,8 @@ So we should now have the following images:
 $ docker images
 
 REPOSITORY                    TAG               IMAGE ID       CREATED          SIZE
-zeppelin-interpreter          0.12.0-SNAPSHOT   4f77fe989eed   3 minutes ago    622MB
-zeppelin-server               0.12.0-SNAPSHOT   4f77fe989eed   3 minutes ago    622MB
+zeppelin-interpreter          0.13.0-SNAPSHOT   4f77fe989eed   3 minutes ago    622MB
+zeppelin-server               0.13.0-SNAPSHOT   4f77fe989eed   3 minutes ago    622MB
 zeppelin-distribution         latest            bd2fb4b321d2   40 minutes ago   1.27GB
 ```
 
@@ -231,7 +231,7 @@ and all interpreter properties are accessible inside the templates.
 
 When interpreter group is `spark`, Zeppelin sets necessary spark configuration automatically to use Spark on Kubernetes.
 It uses client mode, so Spark interpreter Pod works as a Spark driver, spark executors are launched in separate Pods.
-This auto configuration can be overrided by manually setting `spark.master` property of Spark interpreter.
+This auto configuration can be overridden by manually setting `spark.master` property of Spark interpreter.
 
 
 ### Accessing Spark UI (or Service running in interpreter Pod)
@@ -266,7 +266,7 @@ If you like to use your custom domain
 ## Persist /notebook and /conf directory
 
 Notebook and configurations are not persisted by default. Please configure volume and update `k8s/zeppelin-server.yaml`
-to use the volume to persiste /notebook and /conf directory if necessary.
+to use the volume to persist /notebook and /conf directory if necessary.
 
 
 ## Customization
