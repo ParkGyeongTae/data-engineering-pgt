@@ -23,8 +23,6 @@ permissions:
   contents: read # to fetch code (actions/checkout)
 
 jobs:
-
-jobs:
   run-e2e-tests-in-zeppelin-web:
     runs-on: ubuntu-24.04
     steps:
