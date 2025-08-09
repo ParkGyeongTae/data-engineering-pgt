@@ -81,20 +81,17 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-zeppelin-
 
-      # - name: Build & install all needed (populate ~/.m2)
-      #   run: |
-      #     ./mvnw -B clean install -DskipTests -Pweb-classic -Pspark-scala-2.12 -Pweb-dist -Pweb-keys
-
       - name: Build & install all needed
         run: |
-          ./mvnw -B clean install -DskipTests -Pweb-classic -Pspark-scala-2.12 -Pspark-3.4 -Pweb-dist ${MAVEN_ARGS}
+          ./mvnw -B clean install -DskipTests \
+            -Pweb-classic -Pspark-scala-2.12 -Pspark-3.4 -Pweb-dist ${MAVEN_ARGS}
 
       - name: Run headless e2e for zeppelin-web
         run: |
           xvfb-run --auto-servernum --server-args="-screen 0 1024x768x24" \
             ./mvnw -B verify \
-              -pl zeppelin-web \
-              -Pweb-classic -Pweb-dist -Pweb-e2e
+            -pl zeppelin-web \
+            -Pweb-classic -Pspark-scala-2.12 -Pspark-3.4 -Pweb-dist -Pweb-e2e ${MAVEN_ARGS}
 
       - name: Print zeppelin logs
         if: always()
