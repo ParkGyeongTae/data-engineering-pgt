@@ -38,15 +38,17 @@ for stock_code in stock_codes:
     df_cap["시가총액(억)"] = (df_cap["시가총액"] / 1e8).round(0).astype(int)
 
     df = df_price.join(df_cap[["시가총액(억)"]], how="inner")
+
     # --------------------------------------------
-    # 평균값 계산 (최근 5일 / 20일 / 60일 / 120일 / 200일 전 5일 평균)
+    # 평균값 계산
     # --------------------------------------------
-    recent = df.iloc[-5:].mean()  # 최근 5일 평균
-    today_row = df.iloc[-1]  # 오늘(가장 최근) 데이터
-    past_20 = df.iloc[-25:-20].mean()
-    past_60 = df.iloc[-65:-60].mean()
-    past_120 = df.iloc[-125:-120].mean()
-    past_200 = df.iloc[-205:-200].mean()
+    recent = df.iloc[-10:].mean()  # 최근 5일 평균
+    today_row = df.iloc[-1]  # 오늘
+    yesterday_row = df.iloc[-2]  # 하루 전
+    past_20 = df.iloc[-30:-20].mean()
+    past_60 = df.iloc[-70:-60].mean()
+    past_120 = df.iloc[-130:-120].mean()
+    past_200 = df.iloc[-210:-200].mean()
 
     # --------------------------------------------
     # 증가율 계산 함수
@@ -68,6 +70,12 @@ for stock_code in stock_codes:
     거래대금증가율_120, 수익률_120 = make_metrics(past_120)
     거래대금증가율_200, 수익률_200 = make_metrics(past_200)
 
+    # 오늘 기준 계산 (전일 대비)
+    오늘_거래대금증가율 = calc_rate(
+        today_row["거래대금(억)"], yesterday_row["거래대금(억)"]
+    )
+    오늘_수익률 = calc_rate(today_row["종가"], yesterday_row["종가"])
+
     # --------------------------------------------
     # 결과 저장
     # --------------------------------------------
@@ -78,6 +86,8 @@ for stock_code in stock_codes:
             "종목명": stock.get_market_ticker_name(stock_code),
             "오늘 종가": int(today_row["종가"]),
             "오늘 거래대금(억)": int(today_row["거래대금(억)"]),
+            "오늘 거래대금증가율(%)": round(오늘_거래대금증가율, 2),
+            "오늘 수익률(%)": round(오늘_수익률, 2),
             # 20일 기준
             "20일 거래대금증가율(%)": round(거래대금증가율_20, 2),
             "20일 수익률(%)": round(수익률_20, 2),
@@ -92,58 +102,79 @@ for stock_code in stock_codes:
             "200일 수익률(%)": round(수익률_200, 2),
         }
     )
+
 # --------------------------------------------
-# CSV로 저장
+# CSV 저장
 # --------------------------------------------
 df_silver = pd.DataFrame(results)
 df_silver.to_csv("stock_analysis/silver.csv", index=False, encoding="utf-8-sig")
 print("\n✅ 'stock_analysis/silver.csv' 저장 완료!")
-# --------------------------------------------
-# 시각화 (한 그래프에 수익률 + 거래대금증가율)
-# --------------------------------------------
-periods = ["200", "120", "60", "20", "오늘"]  # ← 오늘 추가
 
-fig, ax1 = plt.subplots(figsize=(10, 6))
+# --------------------------------------------
+# 💡 Value vs Attention 매트릭스 (오늘 포함)
+# --------------------------------------------
+plt.figure(figsize=(11, 9))
 
-# 🔹 왼쪽 Y축: 수익률
+stock_colors = {
+    "삼성전자": "tab:blue",
+    "SK하이닉스": "tab:orange",
+    "NAVER": "tab:green",
+}
+
+period_markers = {
+    "오늘": "P",
+    "20": "o",
+    "60": "s",
+    "120": "^",
+    "200": "D",
+}
+
+periods = ["200", "120", "60", "20", "오늘"]
+
 for _, row in df_silver.iterrows():
     name = row["종목명"]
-    returns = [
-        row.get(f"{p}일 수익률(%)", 0) if p != "오늘" else 0 for p in reversed(periods)
-    ]
-    ax1.plot(periods, returns, marker="o", linewidth=2, label=f"{name} 수익률(%)")
+    color = stock_colors.get(name, "gray")
 
-ax1.set_xlabel("기간 (일)", fontsize=12)
-ax1.set_ylabel("수익률(%)", fontsize=12, color="tab:blue")
-ax1.tick_params(axis="y", labelcolor="tab:blue")
-ax1.grid(alpha=0.3)
+    for period in periods:
+        x_col = (
+            f"{period}일 거래대금증가율(%)"
+            if period != "오늘"
+            else "오늘 거래대금증가율(%)"
+        )
+        y_col = f"{period}일 수익률(%)" if period != "오늘" else "오늘 수익률(%)"
 
-# 🔸 오른쪽 Y축: 거래대금증가율
-ax2 = ax1.twinx()
-for _, row in df_silver.iterrows():
-    name = row["종목명"]
-    volumes = [
-        (
-            row.get(f"{p}일 거래대금증가율(%)", 0)
-            if p != "오늘"
-            else row["오늘 거래대금(억)"] / 1000
-        )  # 임시 스케일로 표현
-        for p in reversed(periods)
-    ]
-    ax2.plot(
-        periods,
-        volumes,
-        marker="s",
-        linestyle="--",
-        linewidth=2,
-        alpha=0.7,
-        label=f"{name} 거래대금증가율(%)",
-    )
+        plt.scatter(
+            row[x_col],
+            row[y_col],
+            s=110 if period == "오늘" else 90,
+            color=color,
+            marker=period_markers[period],
+            edgecolors="black",
+            linewidth=0.5,
+            alpha=0.8 if period == "오늘" else 0.6,
+        )
 
-ax2.set_ylabel("거래대금증가율(%)", fontsize=12, color="tab:orange")
-ax2.tick_params(axis="y", labelcolor="tab:orange")
+        plt.text(
+            row[x_col] + 1.2,
+            row[y_col],
+            f"{name}_{period}",
+            fontsize=8,
+            ha="left",
+            va="center",
+            color=color,
+        )
 
-plt.title("📉 (좌→우: 장기→단기→오늘) 수익률 vs 거래대금증가율", fontsize=14)
-fig.legend(loc="upper left", bbox_to_anchor=(0.08, 0.9))
+# 기준선
+plt.axhline(0, color="gray", linestyle="--", alpha=0.5)
+plt.axvline(0, color="gray", linestyle="--", alpha=0.5)
+
+# 제목 및 축
+plt.title(
+    "Value vs Attention Matrix (오늘 + 20·60·120·200일 기준)", fontsize=15, pad=15
+)
+plt.xlabel("거래대금증가율(%) → 투자자 관심도", fontsize=12)
+plt.ylabel("수익률(%) → 기업 가치평가", fontsize=12)
+plt.grid(alpha=0.3)
+
 plt.tight_layout()
 plt.show()
