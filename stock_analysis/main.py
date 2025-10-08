@@ -7,9 +7,9 @@ uv run python stock_analysis/main.py
 import warnings
 
 warnings.filterwarnings("ignore", category=UserWarning, module="pykrx")
-
 from datetime import datetime
 
+import matplotlib.cm as cm
 import matplotlib.pyplot as plt
 import pandas as pd
 from dateutil.relativedelta import relativedelta
@@ -22,9 +22,26 @@ _one_year_ago = (today - relativedelta(years=1)).strftime("%Y%m%d")
 results = []
 
 stock_codes = [
-    "005930",  # 삼성전자
-    "000660",  # 하이닉스
-    "035420",  # 네이버
+    # "005930",  # 삼성전자
+    # "000660",  # 하이닉스
+    # "005935",  # 삼성전자우
+    # "207940",  # 삼성바이오로직스
+    # "068270",  # 셀트리온
+    # "000270",  # 기아
+    # "005380",  # 현대차
+    # "373220",  # LG에너지솔루션
+    # "051910",  # LG화학
+    # "105560",  # KB금융
+    # "055550",  # 신한지주
+    # "012450",  # 한화에어로스페이스
+    # "003550",  # LG
+    # "033780",  # KT&G
+    # "035720",  # 카카오"
+    # "323410",  # 현대모비스
+    # "034020",  # 두산에너빌리티
+    "051900",  # LG생활건강
+    "017670",  # SK텔레콤
+    "010950",  # S-Oil
 ]
 
 for stock_code in stock_codes:
@@ -115,25 +132,24 @@ print("\n✅ 'stock_analysis/silver.csv' 저장 완료!")
 # --------------------------------------------
 plt.figure(figsize=(11, 9))
 
-stock_colors = {
-    "삼성전자": "tab:blue",
-    "SK하이닉스": "tab:orange",
-    "NAVER": "tab:green",
-}
+# 종목명별 색상 자동 할당
+unique_names = df_silver["종목명"].unique()
+colors = cm.get_cmap("tab20", len(unique_names))  # 20개 색상 팔레트
+stock_colors = {name: colors(i) for i, name in enumerate(unique_names)}
 
 period_markers = {
     "오늘": "P",
     "20": "o",
-    "60": "s",
-    "120": "^",
-    "200": "D",
+    "60": "o",
+    "120": "o",
+    "200": "o",
 }
 
 periods = ["200", "120", "60", "20", "오늘"]
 
 for _, row in df_silver.iterrows():
     name = row["종목명"]
-    color = stock_colors.get(name, "gray")
+    color = stock_colors[name]
 
     for period in periods:
         x_col = (
@@ -151,7 +167,7 @@ for _, row in df_silver.iterrows():
             marker=period_markers[period],
             edgecolors="black",
             linewidth=0.5,
-            alpha=0.8 if period == "오늘" else 0.6,
+            alpha=0.85 if period == "오늘" else 0.6,
         )
 
         plt.text(
@@ -164,17 +180,14 @@ for _, row in df_silver.iterrows():
             color=color,
         )
 
-# 기준선
+# 기준선 및 스타일
 plt.axhline(0, color="gray", linestyle="--", alpha=0.5)
 plt.axvline(0, color="gray", linestyle="--", alpha=0.5)
-
-# 제목 및 축
 plt.title(
     "Value vs Attention Matrix (오늘 + 20·60·120·200일 기준)", fontsize=15, pad=15
 )
 plt.xlabel("거래대금증가율(%) → 투자자 관심도", fontsize=12)
 plt.ylabel("수익률(%) → 기업 가치평가", fontsize=12)
 plt.grid(alpha=0.3)
-
 plt.tight_layout()
 plt.show()
