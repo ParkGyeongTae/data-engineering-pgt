@@ -1,0 +1,16 @@
+[project]
+name = "data-engineering-pgt"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "finance-datareader>=0.9.96",
+    "matplotlib>=3.10.6",
+    "pandas>=2.3.3",
+    "plotly>=6.3.1",
+    "pykrx>=1.0.51",
+    "setuptools>=80.9.0",
+    "streamlit>=1.50.0",
+    "yfinance>=0.2.66",
+]
