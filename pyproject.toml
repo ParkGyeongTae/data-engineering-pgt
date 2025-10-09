@@ -7,11 +7,13 @@ requires-python = ">=3.13"
 dependencies = [
     "dotenv>=0.9.9",
     "finance-datareader>=0.9.96",
+    "html5lib>=1.1",
     "matplotlib>=3.10.6",
     "openai>=2.2.0",
     "pandas>=2.3.3",
     "plotly>=6.3.1",
     "pykrx>=1.0.51",
+    "seaborn>=0.13.2",
     "setuptools>=80.9.0",
     "streamlit>=1.50.0",
     "yfinance>=0.2.66",

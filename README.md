@@ -2,6 +2,6 @@
 
 ```bash
 uv init
-uv add pykrx finance-datareader yfinance pandas matplotlib plotly streamlit setuptools dotenv openai
+uv add pykrx finance-datareader yfinance pandas matplotlib plotly streamlit setuptools dotenv openai seaborn html5lib
 uv run python stock_analysis_uv/main.py
 ```

@@ -74,10 +74,10 @@ def clean_theme(theme: str) -> str:
 
 
 def build_theme_table(n=10):
-    """2년전 / 1년전 / 현재 상위 n개 종목 + 테마 + 시가총액(비율)"""
+    """3년전 / 2년전 / 1년전 / 현재 상위 n개 종목 + 테마 + 시가총액(비율)"""
     result_frames = []
-    year_offsets = [2, 1, 0]
-    year_labels = {2: "2년전", 1: "1년전", 0: "오늘"}
+    year_offsets = [3, 2, 1, 0]
+    year_labels = {3: "3년전", 2: "2년전", 1: "1년전", 0: "오늘"}
 
     for offset in year_offsets:
         date, df = get_top_kospi_by_mcap(n=n, years_ago=offset)
@@ -124,9 +124,9 @@ def build_theme_table(n=10):
 
 
 if __name__ == "__main__":
-    top10_compare = build_theme_table(n=10)
+    top10_compare = build_theme_table(n=20)
 
-    print("\n✅ KOSPI 시가총액 상위 10개 비교 (2년전 / 1년전 / 오늘, 요약형)")
+    print("\n✅ KOSPI 시가총액 상위 10개 비교")
     pd.set_option("display.max_rows", 50)
     print(top10_compare.to_string(index=False))
 
