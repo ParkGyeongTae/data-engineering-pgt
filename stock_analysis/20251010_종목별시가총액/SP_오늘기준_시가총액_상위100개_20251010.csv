@@ -1,0 +1,101 @@
+﻿순위,종목코드,종목명,시가총액(조),시가총액비율(%),1순위테마,2순위테마,3순위테마
+1,NVDA,NVIDIA Corporation,6652.188,11.198,AI반도체,데이터센터,자율주행
+2,MSFT,Microsoft Corporation,5418.475,9.121,클라우드,AI,생산성소프트웨어
+3,AAPL,Apple Inc.,5299.827,8.922,스마트폰,AI,서비스
+4,GOOGL,Alphabet Inc.,4111.442,6.921,클라우드,AI,디지털광고
+5,AMZN,"Amazon.com, Inc.",3381.694,5.693,전자상거래,클라우드,AI
+6,META,"Meta Platforms, Inc.",2568.042,4.323,소셜미디어,메타버스,광고
+7,AVGO,Broadcom Inc.,2296.158,3.865,반도체,5G,AI
+8,TSLA,"Tesla, Inc.",2041.403,3.436,전기차,자율주행,에너지저장
+9,BRK-B,Berkshire Hathaway Inc.,1492.505,2.512,투자전략,보험,포트폴리오다각화
+10,ORCL,Oracle Corporation,1217.688,2.05,클라우드,데이터베이스,AI
+11,JPM,JPMorgan Chase & Co.,1191.719,2.006,금융서비스,디지털뱅킹,투자은행
+12,WMT,Walmart Inc.,1144.606,1.927,소매업,전자상거래,물류관리
+13,LLY,Eli Lilly and Company,1081.217,1.82,바이오제약,당뇨병치료,면역치료
+14,V,Visa Inc.,946.863,1.594,디지털결제,핀테크,보안
+15,NFLX,"Netflix, Inc.",740.938,1.247,스트리밍서비스,콘텐츠제작,구독모델
+16,MA,Mastercard Incorporated,717.402,1.208,디지털결제,핀테크,보안솔루션
+17,XOM,Exxon Mobil Corporation,668.596,1.126,석유,천연가스,에너지전환
+18,JNJ,Johnson & Johnson,643.788,1.084,헬스케어,제약,소비재
+19,COST,Costco Wholesale Corporation,581.387,0.979,소매업,회원제서비스,물류관리
+20,ABBV,AbbVie Inc.,578.959,0.975,바이오제약,면역학,암치료
+21,HD,"The Home Depot, Inc.",528.696,0.89,홈리모델링,DIY,건축자재
+22,BAC,Bank of America Corporation,519.575,0.875,금융서비스,디지털뱅킹,경제회복
+23,AMD,"Advanced Micro Devices, Inc.",517.398,0.871,AI반도체,게임,데이터센터
+24,PG,The Procter & Gamble Company,491.371,0.827,소비재,지속가능성,헬스케어
+25,UNH,UnitedHealth Group Incorporated,460.06,0.774,헬스케어,디지털헬스,보험
+26,GE,GE Aerospace,443.41,0.746,항공우주,방산,혁신기술
+27,CVX,Chevron Corporation,424.777,0.715,석유,천연가스,재생에너지
+28,KO,The Coca-Cola Company,401.575,0.676,음료,브랜드가치,지속가능성
+29,IBM,International Business Machines Corporation,372.328,0.627,클라우드컴퓨팅,AI,기업소프트웨어
+30,PM,Philip Morris International Inc.,346.628,0.584,담배대체품,글로벌시장,지속가능성
+31,CAT,Caterpillar Inc.,335.006,0.564,건설장비,인프라투자,지속가능성
+32,GS,"The Goldman Sachs Group, Inc.",334.833,0.564,금융서비스,투자은행,자산관리
+33,CRM,"Salesforce, Inc.",326.043,0.549,클라우드,CRM,AI
+34,ABT,Abbott Laboratories,324.439,0.546,의료기술,진단기기,헬스케어
+35,AXP,American Express Company,318.516,0.536,디지털결제,금융서비스,소비자신용
+36,MRK,"Merck & Co., Inc.",306.59,0.516,제약,백신,생명과학
+37,LIN,Linde plc,300.716,0.506,산업가스,청정에너지,수소경제
+38,MU,"Micron Technology, Inc.",299.685,0.504,메모리반도체,AI반도체,데이터센터
+39,RTX,RTX Corporation,298.522,0.503,방산,항공우주,첨단기술
+40,MCD,McDonald's Corporation,293.65,0.494,패스트푸드,프랜차이즈,건강식품
+41,PEP,"PepsiCo, Inc.",286.644,0.483,음료,건강식품,지속가능성
+42,TMO,Thermo Fisher Scientific Inc.,282.941,0.476,생명과학,진단기술,바이오제약
+43,TMO,Thermo Fisher Scientific Inc.,282.863,0.476,생명과학,진단기기,바이오테크
+44,DIS,The Walt Disney Company,282.797,0.476,스트리밍서비스,테마파크,콘텐츠제작
+45,NOW,"ServiceNow, Inc.",264.576,0.445,클라우드서비스,IT서비스관리,자동화
+46,T,AT&T Inc.,258.322,0.435,5G,통신서비스,미디어
+47,BLK,"BlackRock, Inc.",254.61,0.429,자산운용,ETF,지속가능투자
+48,INTU,Intuit Inc.,254.021,0.428,회계소프트웨어,핀테크,클라우드서비스
+49,LRCX,Lam Research Corporation,247.886,0.417,반도체제조장비,반도체산업,AI
+50,QCOM,QUALCOMM Incorporated,246.968,0.416,5G,반도체,IoT
+51,NEE,"NextEra Energy, Inc.",241.697,0.407,재생에너지,전력망,지속가능성
+52,VZ,Verizon Communications Inc.,236.38,0.398,5G,통신서비스,IoT
+53,BKNG,Booking Holdings Inc.,236.101,0.397,온라인여행,여행재개,디지털서비스
+54,TXN,Texas Instruments Incorporated,230.795,0.389,반도체,전자기기,IoT
+55,TXN,Texas Instruments Incorporated,230.662,0.388,반도체,전자기기,IoT
+56,BA,The Boeing Company,230.139,0.387,항공기제작,방산,우주탐사
+57,AMGN,Amgen Inc.,223.248,0.376,바이오제약,유전자치료,면역치료
+58,ISRG,"Intuitive Surgical, Inc.",221.785,0.373,로봇수술,의료기술,헬스케어혁신
+59,ISRG,"Intuitive Surgical, Inc.",221.785,0.373,로봇수술,의료기술,헬스케어
+60,TJX,"The TJX Companies, Inc.",216.921,0.365,소매,할인소매,소비자경기
+61,ACN,Accenture plc,212.41,0.358,디지털전환,컨설팅,클라우드서비스
+62,SPGI,S&P Global Inc.,210.201,0.354,금융정보,데이터분석,ESG
+63,ETN,Eaton Corporation plc,208.743,0.351,전력관리,지속가능성,자동화
+64,DHR,Danaher Corporation,206.271,0.347,헬스케어,생명과학,자동화
+65,GILD,"Gilead Sciences, Inc.",204.894,0.345,바이오제약,항바이러스치료,면역요법
+66,ADBE,Adobe Inc.,201.867,0.34,디지털콘텐츠,클라우드서비스,AI
+67,PFE,Pfizer Inc.,200.586,0.338,백신,바이오의약품,헬스케어
+68,SYK,Stryker Corporation,198.734,0.335,의료기기,로봇수술,헬스케어혁신
+69,KLAC,KLA Corporation,192.954,0.325,반도체장비,제조자동화,AI
+70,UNP,Union Pacific Corporation,192.609,0.324,물류,철도운송,인프라
+71,LOW,"Lowe's Companies, Inc.",184.233,0.31,홈개선,DIY,소매업
+72,HON,Honeywell International Inc.,181.423,0.305,산업자동화,항공우주,에너지효율
+73,DE,Deere & Company,173.998,0.293,농업기계,자동화,지속가능성
+74,MDT,Medtronic plc,173.506,0.292,의료기기,헬스케어기술,원격의료
+75,LMT,Lockheed Martin Corporation,163.958,0.276,국방,항공우주,첨단기술
+76,ADP,"Automatic Data Processing, Inc.",161.988,0.273,인사관리,클라우드서비스,자동화
+77,COP,ConocoPhillips,157.227,0.265,석유,천연가스,에너지전환
+78,CMCSA,Comcast Corporation,155.021,0.261,스트리밍서비스,케이블TV,5G
+79,PLD,"Prologis, Inc.",149.749,0.252,물류,산업용부동산,전자상거래
+80,SO,The Southern Company,149.448,0.252,전력공급,재생에너지,인프라
+81,NKE,"NIKE, Inc.",140.94,0.237,스포츠웨어,지속가능성,디지털전환
+82,HCA,"HCA Healthcare, Inc.",137.339,0.231,헬스케어,디지털헬스,의료서비스
+83,DUK,Duke Energy Corporation,136.988,0.231,재생에너지,전력망,지속가능성
+84,CME,CME Group Inc.,134.556,0.227,파생상품,금융기술,데이터분석
+85,SBUX,Starbucks Corporation,128.862,0.217,프리미엄커피,글로벌확장,지속가능성
+86,ICE,"Intercontinental Exchange, Inc.",126.516,0.213,금융기술,데이터분석,거래소운영
+87,GD,General Dynamics Corporation,125.97,0.212,국방,항공우주,사이버보안
+88,NOC,Northrop Grumman Corporation,125.181,0.211,국방,항공우주,사이버보안
+89,SNPS,"Synopsys, Inc.",123.133,0.207,반도체설계,EDA소프트웨어,AI
+90,SHW,The Sherwin-Williams Company,116.847,0.197,건축자재,친환경제품,산업용코팅
+91,MMM,3M Company,114.544,0.193,산업재,헬스케어,지속가능성
+92,CI,The Cigna Group,114.27,0.192,헬스케어,보험,디지털헬스
+93,ELV,"Elevance Health, Inc.",111.672,0.188,헬스케어,보험,디지털헬스
+94,MDLZ,"Mondelez International, Inc.",111.336,0.187,스낵,건강식품,글로벌화
+95,EQIX,"Equinix, Inc.",109.508,0.184,데이터센터,클라우드,디지털인프라
+96,AON,Aon plc,108.922,0.183,보험,리스크관리,데이터분석
+97,ECL,Ecolab Inc.,108.754,0.183,물관리,위생관리,지속가능성
+98,CTAS,Cintas Corporation,106.964,0.18,유니폼서비스,안전관리,HR솔루션
+99,PNC,"The PNC Financial Services Group, Inc.",105.362,0.177,은행업,디지털뱅킹,자산관리
+100,EMR,Emerson Electric Co.,103.692,0.175,자동화,산업IoT,에너지효율

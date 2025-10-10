@@ -1,5 +1,5 @@
 """
-uv run streamlit run stock_analysis/20251010_종목별시가총액/KOSPI_테마별_시가총액_분석_streamlit.py
+uv run streamlit run stock_analysis/20251010_종목별시가총액/KOSPI_오늘기준_시가총액_상위50개_테마_streamlit.py
 """
 
 # pylint: disable=non-ascii-name,wrong-import-position
