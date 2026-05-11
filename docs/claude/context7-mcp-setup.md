@@ -1,6 +1,6 @@
-# sequential-thinking MCP
+# context7 MCP 설정 방법
 
-단계적 사고가 필요한 복잡한 작업에서 Claude의 추론 능력을 보조하는 MCP입니다.
+라이브러리, 프레임워크, SDK 등의 최신 공식 문서를 Claude가 실시간으로 조회할 수 있게 해주는 MCP입니다.
 
 ## 추가 방법 3가지
 
@@ -18,11 +18,9 @@
 
 ```json
 "mcpServers": {
-  "sequential-thinking": {
-    "type": "stdio",
-    "command": "npx",
-    "args": ["-y", "@modelcontextprotocol/server-sequential-thinking"],
-    "env": {}
+  "context7": {
+    "type": "http",
+    "url": "https://mcp.context7.com/mcp"
   }
 }
 ```
@@ -51,10 +49,9 @@
 ```json
 {
   "mcpServers": {
-    "sequential-thinking": {
-      "type": "stdio",
-      "command": "npx",
-      "args": ["-y", "@modelcontextprotocol/server-sequential-thinking"]
+    "context7": {
+      "type": "http",
+      "url": "https://mcp.context7.com/mcp"
     }
   }
 }
@@ -66,10 +63,10 @@
 
 ```bash
 # 글로벌 추가 (~/.claude.json에 저장)
-claude mcp add sequential-thinking -s user -- npx -y @modelcontextprotocol/server-sequential-thinking
+claude mcp add --transport http context7 https://mcp.context7.com/mcp -s user
 
 # 프로젝트별 추가 (.mcp.json에 저장)
-claude mcp add sequential-thinking -s project -- npx -y @modelcontextprotocol/server-sequential-thinking
+claude mcp add --transport http context7 https://mcp.context7.com/mcp -s project
 ```
 
 ## 적용
