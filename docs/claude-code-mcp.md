@@ -1,84 +1,77 @@
-# Claude Code MCP 설정 가이드
+# sequential-thinking MCP 추가 방법
 
-MCP(Model Context Protocol)는 Claude Code에 외부 도구나 데이터 소스를 연결하는 방법입니다.
+단계적 사고가 필요한 복잡한 작업에서 Claude의 추론 능력을 보조하는 MCP입니다.
 
-## 설정 파일 위치
+## 추가 방법 3가지
 
-MCP는 `~/.claude.json` 파일의 `mcpServers` 항목에 등록합니다. 이 설정은 모든 프로젝트에 전역으로 적용됩니다.
+| 방법 | 적용 범위 | 파일 |
+|------|-----------|------|
+| `~/.claude.json` | 전체 프로젝트 (글로벌) | 직접 편집 |
+| `.mcp.json` | 해당 프로젝트만 | 프로젝트 루트에 생성 |
+| CLI 명령어 | 글로벌 또는 프로젝트 | 터미널에서 실행 |
 
+---
+
+## 방법 1. `~/.claude.json` 직접 편집 (글로벌)
+
+`~/.claude.json`의 `mcpServers` 항목에 아래 내용을 추가합니다.
+
+```json
+"mcpServers": {
+  "sequential-thinking": {
+    "type": "stdio",
+    "command": "npx",
+    "args": ["-y", "@modelcontextprotocol/server-sequential-thinking"],
+    "env": {}
+  }
+}
 ```
-~/.claude.json
-```
 
-## 현재 등록된 MCP
-
-| 이름 | 용도 |
-|------|------|
-| `context7` | 라이브러리 공식 문서 실시간 조회 |
-| `github` | GitHub 이슈, PR, 코드 검색 등 |
-
-## MCP 추가 방법
-
-`~/.claude.json`의 `mcpServers`에 항목을 추가합니다.
-
-### HTTP 방식 (context7 예시)
+기존에 다른 MCP가 있다면 항목을 이어서 추가합니다.
 
 ```json
 "mcpServers": {
   "context7": {
     "type": "http",
     "url": "https://mcp.context7.com/mcp"
-  }
-}
-```
-
-### stdio 방식 (npx로 실행하는 패키지)
-
-```json
-"mcpServers": {
-  "my-mcp": {
+  },
+  "sequential-thinking": {
     "type": "stdio",
     "command": "npx",
-    "args": ["-y", "패키지명"],
+    "args": ["-y", "@modelcontextprotocol/server-sequential-thinking"],
     "env": {}
   }
 }
 ```
 
-### 환경변수가 필요한 경우 (github 예시)
+## 방법 2. `.mcp.json` (프로젝트별)
+
+프로젝트 루트에 `.mcp.json` 파일을 생성합니다. 해당 프로젝트에서만 적용되며, git에 커밋하면 팀과 공유할 수 있습니다.
 
 ```json
-"mcpServers": {
-  "github": {
-    "command": "npx",
-    "args": ["-y", "@modelcontextprotocol/server-github"],
-    "env": {
-      "GITHUB_PERSONAL_ACCESS_TOKEN": "your_token_here"
+{
+  "mcpServers": {
+    "sequential-thinking": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-sequential-thinking"]
     }
   }
 }
 ```
 
-## 제거했던 MCP 재추가 방법
+## 방법 3. CLI 명령어
 
-### sequential-thinking
+터미널에서 직접 추가할 수 있습니다.
 
-단계적 사고가 필요한 복잡한 작업에 유용합니다. 아래 내용을 `mcpServers`에 추가하세요.
+```bash
+# 글로벌 추가 (~/.claude.json에 저장)
+claude mcp add sequential-thinking -s user -- npx -y @modelcontextprotocol/server-sequential-thinking
 
-```json
-"sequential-thinking": {
-  "type": "stdio",
-  "command": "npx",
-  "args": ["-y", "@modelcontextprotocol/server-sequential-thinking"],
-  "env": {}
-}
+# 프로젝트별 추가 (.mcp.json에 저장)
+claude mcp add sequential-thinking -s project -- npx -y @modelcontextprotocol/server-sequential-thinking
 ```
 
 ## 적용
 
 설정 파일 수정 후 Claude Code를 재시작하면 적용됩니다.
-
-## 참고
-
-- 공식 MCP 서버 목록: https://github.com/modelcontextprotocol/servers
-- 프로젝트별로 MCP를 다르게 설정하려면 `~/.claude.json`의 `projects` 항목 안에 `mcpServers`를 추가하면 됩니다
