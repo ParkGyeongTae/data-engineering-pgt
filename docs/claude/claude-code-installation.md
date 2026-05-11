@@ -12,7 +12,13 @@ Claude Code는 Anthropic이 만든 AI 기반 CLI 도구로, 터미널에서 Clau
 
 ### 방법 1. npm (권장 - 모든 OS)
 
+Node.js가 없다면 먼저 설치합니다. macOS는 Homebrew를 사용하는 것이 가장 간단합니다.
+
 ```bash
+# Node.js 설치 (macOS)
+brew install node
+
+# Claude Code 설치
 npm install -g @anthropic-ai/claude-code
 ```
 
