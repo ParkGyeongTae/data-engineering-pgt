@@ -10,7 +10,14 @@ data-engineering-pgt/
 │   ├── docker/                # 인프라 환경 구성 (ELK, Spark, Ubuntu)
 │   ├── ecommerce-behavior-data/  # 이커머스 행동 데이터 분석 (Scala/Spark)
 │   └── online-course/         # 강의 실습 코드 (Java, Spring)
-└── stock_analysis/            # 주식 데이터 분석 (Python)
+├── stock_analysis/            # 주식 데이터 분석 (Python)
+└── docs/                      # 학습 및 실무 지식 문서
+    ├── claude/                # Claude Code 관련
+    │   ├── claude-code-installation.md
+    │   ├── claude-dashboard.md
+    │   └── sequential-thinking.md
+    └── git/                   # Git 관련
+        └── pr-checkout.md
 ```
 
 ## 섹션별 설명
