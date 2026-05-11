@@ -2,7 +2,25 @@
 
 GitHub 이슈, PR, 코드 검색 등 GitHub 작업을 Claude에서 직접 수행할 수 있게 해주는 MCP입니다.
 
-## 사전 준비: Personal Access Token 발급
+## 사전 준비 1: Node.js 설치
+
+`npx`는 Node.js에 포함된 도구로, GitHub MCP 실행에 필요합니다.
+
+```bash
+# 설치 확인
+node --version
+npx --version
+```
+
+설치되어 있지 않다면 Homebrew로 설치합니다.
+
+```bash
+brew install node
+```
+
+---
+
+## 사전 준비 2: Personal Access Token 발급
 
 [GitHub Settings → Developer settings → Personal access tokens](https://github.com/settings/tokens) 에서 토큰을 발급받습니다.
 

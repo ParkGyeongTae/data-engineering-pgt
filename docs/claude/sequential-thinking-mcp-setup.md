@@ -2,6 +2,24 @@
 
 단계적 사고가 필요한 복잡한 작업에서 Claude의 추론 능력을 보조하는 MCP입니다.
 
+## 사전 준비: Node.js 설치
+
+`npx`는 Node.js에 포함된 도구로, sequential-thinking MCP 실행에 필요합니다.
+
+```bash
+# 설치 확인
+node --version
+npx --version
+```
+
+설치되어 있지 않다면 Homebrew로 설치합니다.
+
+```bash
+brew install node
+```
+
+---
+
 ## 추가 방법 3가지
 
 | 방법 | 적용 범위 | 파일 |
