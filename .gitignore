@@ -146,9 +146,6 @@ tramp
 # jEnv file
 .java-version
 
-# pyenv file
-.python-version
-
 # python venv
 .venv
 
