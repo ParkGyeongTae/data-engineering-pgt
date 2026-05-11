@@ -1,4 +1,4 @@
-# sequential-thinking MCP 추가 방법
+# sequential-thinking MCP
 
 단계적 사고가 필요한 복잡한 작업에서 Claude의 추론 능력을 보조하는 MCP입니다.
 
