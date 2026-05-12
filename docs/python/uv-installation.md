@@ -26,6 +26,22 @@ curl -LsSf https://astral.sh/uv/install.sh | sh
 
 ---
 
+## 업그레이드 방법
+
+### Homebrew
+
+```bash
+brew upgrade uv
+```
+
+### 공식 설치 스크립트
+
+```bash
+uv self update
+```
+
+---
+
 ## 주요 명령어
 
 ### 프로젝트 초기화
