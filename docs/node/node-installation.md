@@ -38,6 +38,26 @@ nvm list
 
 ---
 
+## 업그레이드 방법
+
+### Homebrew
+
+```bash
+brew upgrade node
+```
+
+`npm`, `npx`는 Node.js에 포함된 도구라서 함께 업그레이드됩니다.
+
+### nvm
+
+```bash
+# 최신 LTS 버전 설치 후 전환
+nvm install --lts
+nvm use --lts
+```
+
+---
+
 ## npx란?
 
 `npx`는 Node.js에 포함된 패키지 실행 도구입니다. 전역 설치 없이 패키지를 바로 다운로드하여 실행합니다.
