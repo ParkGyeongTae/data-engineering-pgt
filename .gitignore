@@ -37,3 +37,6 @@ Thumbs.db
 
 # Claude Code 로컬 설정
 .claude/settings.local.json
+
+# 개인 문서
+docs/personal/
