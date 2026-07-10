@@ -40,3 +40,8 @@ Thumbs.db
 
 # 개인 문서
 docs/personal/
+
+# 미디어 파일
+*.mp3
+*.mp4
+*.jpg
