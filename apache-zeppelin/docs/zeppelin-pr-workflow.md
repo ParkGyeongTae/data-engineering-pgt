@@ -1,13 +1,36 @@
-# Apache Zeppelin Contribution Workflow
+# Apache Zeppelin PR 워크플로우
 
 ## 전체 흐름
 
+0. 사전 준비 (최초 1회)
 1. JIRA 이슈 생성
 2. 브랜치 생성 및 코드 수정
-3. 커밋 & 푸시
-4. PR 생성
-5. 리뷰
-6. 머지
+3. 로컬 검증
+4. 커밋 & 푸시
+5. PR 생성
+6. 리뷰
+7. 머지
+8. JIRA 이슈 닫기
+
+---
+
+## 0. 사전 준비 (최초 1회)
+
+```bash
+# fork: GitHub에서 apache/zeppelin → ParkGyeongTae/zeppelin fork
+git clone https://github.com/ParkGyeongTae/zeppelin.git
+cd zeppelin
+git remote add upstream git@github.com:apache/zeppelin.git
+git remote -v
+# origin   -> ParkGyeongTae/zeppelin (fetch/push)
+# upstream -> apache/zeppelin (fetch/push)
+```
+
+머지(6단계)를 하려면 GitHub Personal Access Token을 발급해 환경변수로 등록해둔다.
+
+```bash
+export GITHUB_OAUTH_KEY=<personal access token>
+```
 
 ---
 
@@ -32,7 +55,18 @@ git checkout -b ZEPPELIN-XXXX
 
 ---
 
-## 3. 커밋 & 푸시
+## 3. 로컬 검증
+
+푸시 전에 관련 모듈 테스트를 돌려 회귀를 확인한다.
+
+```bash
+./mvnw test -pl <module>
+# 특정 테스트만: ./mvnw test -pl <module> -Dtest=<TestClass>
+```
+
+---
+
+## 4. 커밋 & 푸시
 
 ```bash
 git add <파일>
@@ -42,7 +76,7 @@ git push origin ZEPPELIN-XXXX
 
 ---
 
-## 4. PR 생성
+## 5. PR 생성
 
 GitHub에서 `ParkGyeongTae/zeppelin` → `apache/zeppelin` 으로 PR을 생성한다.
 
@@ -58,13 +92,23 @@ gh pr list --search "ZEPPELIN-XXXX" --repo apache/zeppelin --state all
 
 ---
 
-## 5. 리뷰
+## 6. 리뷰
 
 커미터의 리뷰를 기다린다. 요청 사항이 있으면 수정 후 같은 브랜치에 추가 커밋하거나 force push한다.
 
+CI가 실패하면 아래로 원인을 구분한다.
+
+```bash
+gh pr view <PR번호> --repo apache/zeppelin --json statusCheckRollup
+```
+
+- PR이 건드리지 않은 모듈(예: spark/flink 테스트인데 변경은 influxdb)에서만 실패 → conda 타임아웃, selenium flaky 등 인프라성 실패일 가능성이 높음
+- 같은 시점의 `master` 브랜치 워크플로우(`gh run list --repo apache/zeppelin --branch master`)에서 동일 잡이 성공했는지 대조해 flaky 여부를 확인한다
+- 필요 시 실패한 잡만 재실행(rerun)한다
+
 ---
 
-## 6. 머지
+## 7. 머지
 
 리뷰가 완료되면 포크 클론(origin = ParkGyeongTae/zeppelin) 에서 실행한다.
 
@@ -93,9 +137,16 @@ PR #5285 merged! (hash: f8f51809)
 Commented on PR with merge summary.
 ```
 
+### 브랜치 정리
+
+```bash
+git branch -d ZEPPELIN-XXXX
+git push origin --delete ZEPPELIN-XXXX
+```
+
 ---
 
-## 7. JIRA 이슈 닫기
+## 8. JIRA 이슈 닫기
 
 머지 후 JIRA 이슈를 수동으로 Resolved 처리한다.
 
