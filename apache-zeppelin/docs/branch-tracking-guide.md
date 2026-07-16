@@ -69,8 +69,9 @@ git pull
 |---|---|---|
 | 브랜치명 | `master` | `upstream-master` (신규) |
 | 기존 `master`(origin 추적) | 대체됨 | 유지됨 |
-| PR용 브랜치(`ZEPPELIN-XXXX`) 생성 기준 | `master`(=upstream) | 기존 `master`(origin) 그대로 사용 가능 |
+| PR용 브랜치(`ZEPPELIN-XXXX`) 생성 기준 | `master`(=upstream) | `upstream-master`에서 분기 (기존 `master`도 사용 가능하지만 매번 `git pull upstream master` 필요) |
 | 실수로 upstream에 push할 위험 | 있음 (별도 설정 필요) | 없음 |
 
 - 새 작업 브랜치는 최신 코드를 기준으로 만들어야 하므로, upstream과 동기화된 브랜치(`master` 또는 `upstream-master`)에서 분기한다.
 - 방법 2가 origin/upstream 역할이 분리되어 있어 사고 위험이 적다. 이미 `master`가 origin을 추적 중인 상태에서 upstream 추적을 추가하고 싶다면 방법 2를 권장한다.
+- 방법 2에서는 `git checkout master && git pull upstream master` 대신 `git checkout upstream-master && git pull` 후 분기하면 origin의 `master`를 건드리지 않고도 PR 브랜치를 만들 수 있다.
