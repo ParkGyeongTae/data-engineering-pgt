@@ -18,11 +18,13 @@ company_research/
 │   ├── overview.md
 │   ├── history.md
 │   ├── financials.md
+│   ├── metrics.md
 │   └── investment.md
 ├── synopsys/
 │   ├── overview.md
 │   ├── history.md
 │   ├── financials.md
+│   ├── metrics.md
 │   └── investment.md
 └── <company-name>/
     └── ...
@@ -39,7 +41,8 @@ company_research/
 |--------|-----------|-----------|
 | `overview.md` | 회사 개요, 사업 모델(**어떻게 돈을 버는가**), 산업 내 위치 | ✅ 필수 |
 | `history.md` | 창업부터 현재까지의 연혁·주요 이벤트 | 선택 |
-| `financials.md` | 매출·이익·성장률·재무건전성·현금흐름 등 정량 지표 | 선택 |
+| `financials.md` | 매출·이익·성장률·재무건전성·현금흐름 등에 대한 **서술형** 분석 | 선택 |
+| `metrics.md` | 최근 5개년+올해(연간) / 최근 6개 분기의 매출·영업이익·PER·유동비율·부채비율·증감액·증감률 등 **원자료 수치표** (평균·중앙값 비교용) | 선택 |
 | `investment.md` | 투자 포인트(강점)·리스크·경쟁 해자·밸류에이션·**투자 결론** | 선택 |
 | `news.md` | 최근 뉴스·이슈·실적 발표 등 시점성 메모 | 선택 |
 
