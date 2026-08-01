@@ -39,8 +39,6 @@ EDA 시장은 **Synopsys · Cadence · Siemens EDA** 3사(Big Three)가 과점�
 - **System Design and Analysis 확장**: BETA CAE(구조 해석), OpenEye Scientific(분자 시뮬레이션) 등 인수를 통해 반도체를 넘어 자동차·항공·제약 등으로 고객군을 넓히는 중 — Synopsys의 Ansys 인수와 유사한 방향의 경쟁.
 - **AI 반도체 수혜**: AI 칩 설계 복잡도가 커질수록 EDA 툴 수요도 함께 증가하는 구조.
 
-> 상세 재무는 `financials.md`, 투자 논거·리스크는 `investment.md`로 분리해 정리 예정. 회사 연혁은 `history.md` 참고.
-
 ---
 
 ## 참고 자료

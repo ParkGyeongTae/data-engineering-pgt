@@ -50,8 +50,6 @@ EDA 시장은 **Synopsys · Cadence · Siemens EDA** 3사(Big Three)가 과점�
 - [Synopsys Wikipedia](https://en.wikipedia.org/wiki/Synopsys)
 - [Synopsys Q1 FY2026 실적 (Futurum)](https://futurumgroup.com/insights/synopsys-q1-fy-2026-earnings-highlight-eda-and-ansys-momentum/)
 
-> 회사 연혁은 `history.md` 참고.
-
 ---
 
 *작성일: 2026-08-01*

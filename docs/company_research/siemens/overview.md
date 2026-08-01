@@ -42,8 +42,6 @@ Digital Industries 사업부 산하 소프트웨어 브랜드로 포함되어 �
 - **EDA 관점**: 반도체 설계 자동화(EDA) 시장은 **Synopsys · Cadence · Siemens EDA** 3사(Big Three)가 과점하며, Siemens EDA는 2017년 Mentor Graphics 인수로 이 시장에 진입했다. 다만 Siemens AG 투자 관점에서는 EDA가 회사 전체 실적을 좌우하는 요소는 아니다.
 - **자회사 분할 상장 전략**: Siemens Healthineers(2018년 IPO), Siemens Energy(2020년 스핀오프) 등 사업부를 별도 상장시켜 각 사업의 시장 가치를 독립적으로 평가받게 하는 전략을 지속해왔다.
 
-> 상세 재무는 `financials.md`, 투자 논거·리스크는 `investment.md`로 분리해 정리 예정. 회사 연혁은 `history.md` 참고.
-
 ---
 
 ## 참고 자료
