@@ -44,28 +44,13 @@ EDA 시장은 **Synopsys · Cadence · Siemens EDA** 3사(Big Three)가 과점�
 
 ---
 
-## 4. 역사 / 주요 이벤트
-
-| 연도 | 내용 |
-|------|------|
-| 1986 | 미국 노스캐롤라이나에서 Aart de Geus 등이 공동 창업 (초기 사명 Optimal Solutions). GE의 논리 합성(logic synthesis) 기술에서 출발 |
-| 1992 | NASDAQ 상장 |
-| 1994~2024 | Aart de Geus가 CEO로서 30년간 회사를 이끔 |
-| 2014~2023 | 애플리케이션 보안 기업 13곳 인수 (Codenomicon, Cigital, Black Duck, WhiteHat 등) → Software Integrity Group(SIG) 구성 |
-| 2024.01 | Sassine Ghazi CEO 취임, Aart de Geus는 Executive Chairman으로 |
-| 2024.08~10 | 소프트웨어 보안 사업부(SIG) 매각 → Black Duck Software로 독립 (Clearlake Capital, Francisco Partners 인수) |
-| 2025.07 | **Ansys 인수 완료** (약 349억 달러 규모) |
-
----
-
 ## 참고 자료
 
 - [Synopsys 공식 홈페이지](https://www.synopsys.com)
 - [Synopsys Wikipedia](https://en.wikipedia.org/wiki/Synopsys)
-- [Synopsys Completes Acquisition of Ansys (PR Newswire)](https://www.prnewswire.com/news-releases/synopsys-completes-acquisition-of-ansys-302507582.html)
 - [Synopsys Q1 FY2026 실적 (Futurum)](https://futurumgroup.com/insights/synopsys-q1-fy-2026-earnings-highlight-eda-and-ansys-momentum/)
-- [3 reasons Synopsys is selling its app security business (TechTarget)](https://www.techtarget.com/searchsecurity/opinion/Reasons-Synopsys-is-selling-its-app-security-business)
-- [History of Synopsys (FundingUniverse)](https://www.fundinguniverse.com/company-histories/synopsys-inc-history/)
+
+> 회사 연혁은 `history.md` 참고.
 
 ---
 

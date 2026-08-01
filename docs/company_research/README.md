@@ -16,10 +16,12 @@ company_research/
 ├── README.md            # (이 파일) 공통 규칙
 ├── _template/           # 새 회사 추가 시 복사해서 쓰는 템플릿
 │   ├── overview.md
+│   ├── history.md
 │   ├── financials.md
 │   └── investment.md
 ├── synopsys/
 │   ├── overview.md
+│   ├── history.md
 │   ├── financials.md
 │   └── investment.md
 └── <company-name>/
@@ -36,6 +38,7 @@ company_research/
 | 파일명 | 담는 내용 | 필수 여부 |
 |--------|-----------|-----------|
 | `overview.md` | 회사 개요, 사업 모델(**어떻게 돈을 버는가**), 산업 내 위치 | ✅ 필수 |
+| `history.md` | 창업부터 현재까지의 연혁·주요 이벤트 | 선택 |
 | `financials.md` | 매출·이익·성장률·재무건전성·현금흐름 등 정량 지표 | 선택 |
 | `investment.md` | 투자 포인트(강점)·리스크·경쟁 해자·밸류에이션·**투자 결론** | 선택 |
 | `news.md` | 최근 뉴스·이슈·실적 발표 등 시점성 메모 | 선택 |
