@@ -9,7 +9,7 @@
 
 ## 📁 폴더 구조
 
-회사 하나당 **소문자 폴더 하나**를 만들고, 그 안에 정해진 파일들을 둡니다.
+**산업/섹터 폴더** 아래에 회사 폴더를 둡니다.
 
 ```
 company_research/
@@ -20,17 +20,18 @@ company_research/
 │   ├── financials.md
 │   ├── metrics.md
 │   └── investment.md
-├── synopsys/
-│   ├── overview.md
-│   ├── history.md
-│   ├── financials.md
-│   ├── metrics.md
-│   └── investment.md
-└── <company-name>/
-    └── ...
+├── eda/                 # EDA (Electronic Design Automation)
+│   ├── synopsys/
+│   ├── cadence_design_systems/
+│   └── siemens/
+└── <sector>/
+    └── <company-name>/
+        └── ...
 ```
 
-- 폴더명은 **회사명 소문자 케밥케이스** (예: `synopsys`, `nvidia`, `samsung-electronics`)
+- 섹터 폴더명: **소문자 케밥케이스** (예: `eda`, `semiconductor`, `cloud`)
+- 회사 폴더명: **회사명 소문자 스네이크케이스** (예: `synopsys`, `nvidia`, `samsung_electronics`)
+- 복합기업은 "관심 이유"가 되는 사업 기준 섹터에 배치 (예: Siemens → `eda/`)
 - 처음엔 `overview.md`만 있어도 됨. 분석이 깊어지면 아래 표대로 분리.
 
 ---
@@ -65,7 +66,7 @@ company_research/
 
 ```bash
 # 1. 템플릿 복사
-cp -r docs/company_research/_template docs/company_research/<company-name>
+cp -r docs/company_research/_template docs/company_research/<sector>/<company-name>
 
 # 2. 파일 내용 채우기
 # 3. 필요 없는 파일은 삭제 (overview.md는 유지 권장)

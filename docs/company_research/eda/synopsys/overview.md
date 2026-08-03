@@ -7,7 +7,8 @@
 - **설립 / 본사**: 1986년 / 미국 캘리포니아 서니베일(Sunnyvale)
 - **CEO**: Sassine Ghazi (2024년 1월 취임, 전임 Aart de Geus는 Executive Chairman으로 이동)
 - **홈페이지**: https://www.synopsys.com
-- **시가총액**: (확인 필요 — 기준일 명시하여 업데이트 예정)
+- **섹터 / 산업**: 테크 / EDA (Electronic Design Automation)
+- **시가총액**: 약 $747억 달러 (2026.7.31 기준, 종가 $388.76 × 희석주식수 약 192.3백만주)
 
 ---
 

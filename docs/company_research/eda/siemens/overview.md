@@ -7,6 +7,7 @@
 - **설립 / 본사**: 1847년 (Siemens & Halske로 창업, 1966년 현재의 Siemens AG로 통합) / 독일 뮌헨(Munich)·베를린(Berlin)
 - **CEO**: Dr. Roland Busch (2021년 2월 취임)
 - **홈페이지**: https://www.siemens.com
+- **섹터 / 산업**: 산업재 / 산업 자동화·디지털화 (EDA는 Digital Industries 사업부 내 포함)
 - **시가총액**: 약 2,383억 달러 (2026-07-29 기준)
 
 ---

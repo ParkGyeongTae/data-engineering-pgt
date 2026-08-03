@@ -7,6 +7,7 @@
 - **설립 / 본사**: 1988년 / 미국 캘리포니아 산호세(San Jose)
 - **CEO**: Anirudh Devgan (2021년 12월 취임)
 - **홈페이지**: https://www.cadence.com
+- **섹터 / 산업**: 테크 / EDA (Electronic Design Automation)
 - **시가총액**: 약 930억 달러 (2026-07-22 기준)
 
 ---
