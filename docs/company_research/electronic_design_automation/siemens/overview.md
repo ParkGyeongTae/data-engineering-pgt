@@ -2,6 +2,8 @@
 
 > 자동화·디지털화를 핵심으로 하는 독일의 기술 대기업. 산업 자동화(Digital Industries), 스마트 인프라, 철도(Mobility), 헬스케어(Healthineers) 등 여러 산업에 걸친 포트폴리오를 보유한 전형적인 산업 컨글로머리트.
 
+> ⚠️ Siemens AG는 독일 프랑크푸르트 증권거래소에 유로(EUR)로 상장되어 있음. 아래 시가총액은 비교 편의를 위해 미국 달러(USD)로 환산한 값이며, 환산 시점의 정확한 환율은 별도로 확인하지 않음 — 정밀 비교 시 원 통화(EUR) 기준 시가총액을 다시 확인할 것.
+
 - **회사명**: Siemens AG
 - **티커 / 상장 시장**: SIE (프랑크푸르트 증권거래소, DAX 구성종목 / 미국 OTC ADR: SIEGY)
 - **설립 / 본사**: 1847년 (Siemens & Halske로 창업, 1966년 현재의 Siemens AG로 통합) / 독일 뮌헨(Munich)·베를린(Berlin)
@@ -42,6 +44,14 @@ Digital Industries 사업부 산하 소프트웨어 브랜드로 포함되어 �
 - **다각화된 산업 컨글로머리트**: 특정 산업 경기(반도체, 헬스케어, 철도 등)에 대한 의존도가 분산되어 있어 경기 방어적 성격을 일부 지님.
 - **EDA 관점**: 반도체 설계 자동화(EDA) 시장은 **Synopsys · Cadence · Siemens EDA** 3사(Big Three)가 과점하며, Siemens EDA는 2017년 Mentor Graphics 인수로 이 시장에 진입했다. 다만 Siemens AG 투자 관점에서는 EDA가 회사 전체 실적을 좌우하는 요소는 아니다.
 - **자회사 분할 상장 전략**: Siemens Healthineers(2018년 IPO), Siemens Energy(2020년 스핀오프) 등 사업부를 별도 상장시켜 각 사업의 시장 가치를 독립적으로 평가받게 하는 전략을 지속해왔다.
+
+---
+
+## 관련 문서
+
+- [역사 / 주요 이벤트](./history.md)
+- [핵심 지표](./metrics.md)
+- [밸류에이션 / 적정주가](./valuation.md)
 
 ---
 

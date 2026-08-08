@@ -2,6 +2,8 @@
 
 > 반도체 설계 자동화(EDA) 분야의 Big Three 중 하나. Synopsys와 함께 EDA 시장을 양분하며, 최근 System Design and Analysis(시스템 설계·해석) 영역으로 확장 중.
 
+> ⚠️ 시가총액은 통화 단위(USD)와 기준일을 함께 표기함.
+
 - **회사명**: Cadence Design Systems, Inc.
 - **티커 / 상장 시장**: CDNS (NASDAQ)
 - **설립 / 본사**: 1988년 / 미국 캘리포니아 산호세(San Jose)
@@ -39,6 +41,14 @@ EDA 시장은 **Synopsys · Cadence · Siemens EDA** 3사(Big Three)가 과점�
 - **높은 진입장벽 + 과점 구조**: 고객(반도체 회사)의 전환비용이 매우 높아 안정적인 반복 매출 구조.
 - **System Design and Analysis 확장**: BETA CAE(구조 해석), OpenEye Scientific(분자 시뮬레이션) 등 인수를 통해 반도체를 넘어 자동차·항공·제약 등으로 고객군을 넓히는 중 — Synopsys의 Ansys 인수와 유사한 방향의 경쟁.
 - **AI 반도체 수혜**: AI 칩 설계 복잡도가 커질수록 EDA 툴 수요도 함께 증가하는 구조.
+
+---
+
+## 관련 문서
+
+- [역사 / 주요 이벤트](./history.md)
+- [핵심 지표](./metrics.md)
+- [밸류에이션 / 적정주가](./valuation.md)
 
 ---
 
