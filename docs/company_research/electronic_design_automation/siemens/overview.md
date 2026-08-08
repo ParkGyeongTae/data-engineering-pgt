@@ -52,6 +52,7 @@ Digital Industries 사업부 산하 소프트웨어 브랜드로 포함되어 �
 ## 관련 문서
 
 - [역사 / 주요 이벤트](./history.md)
+- [CEO / 경영진](./ceo.md)
 - [핵심 지표](./metrics.md)
 - [밸류에이션 / 적정주가](./valuation.md)
 

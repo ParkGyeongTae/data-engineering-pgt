@@ -52,6 +52,7 @@ EDA 시장은 **Synopsys · Cadence · Siemens EDA** 3사(Big Three)가 과점�
 ## 관련 문서
 
 - [역사 / 주요 이벤트](./history.md)
+- [CEO / 경영진](./ceo.md)
 - [핵심 지표](./metrics.md)
 - [밸류에이션 / 적정주가](./valuation.md)
 

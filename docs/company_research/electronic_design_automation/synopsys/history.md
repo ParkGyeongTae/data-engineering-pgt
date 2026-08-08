@@ -2,6 +2,8 @@
 
 > 논리 합성 스타트업에서 출발해 30년 넘게 EDA 1위 자리를 지켜왔고, 2025년 Ansys 인수로 "칩 설계 + 시스템 시뮬레이션" 회사로 재편 중.
 
+> ⚠️ 모든 항목은 웹검색으로 확인한 사실만 기록. 추측이나 출처 불명 내용은 작성 금지 — 가능하면 연도뿐 아니라 월까지(예: 2021.02) 표기하고 출처를 함께 남길 것.
+
 ---
 
 ## 연혁
@@ -15,6 +17,15 @@
 | 2024.01 | Sassine Ghazi CEO 취임, Aart de Geus는 Executive Chairman으로 |
 | 2024.08~10 | 소프트웨어 보안 사업부(SIG) 매각 → Black Duck Software로 독립 (Clearlake Capital, Francisco Partners 인수) |
 | 2025.07 | **Ansys 인수 완료** (약 349억 달러 규모) |
+
+---
+
+## 관련 문서
+
+- [개요](./overview.md)
+- [CEO / 경영진](./ceo.md)
+- [핵심 지표](./metrics.md)
+- [밸류에이션 / 적정주가](./valuation.md)
 
 ---
 

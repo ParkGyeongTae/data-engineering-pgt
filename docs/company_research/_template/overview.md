@@ -43,6 +43,7 @@
 같은 폴더 내 다른 문서로 이동 (없는 문서는 링크 제거):
 
 - [역사 / 주요 이벤트](./history.md)
+- [CEO / 경영진](./ceo.md)
 - [재무 / 실적](./financials.md)
 - [핵심 지표](./metrics.md)
 - [밸류에이션 / 적정주가](./valuation.md)
