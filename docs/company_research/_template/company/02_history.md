@@ -28,6 +28,7 @@
 - [핵심 지표](./05_metrics.md)
 - [밸류에이션 / 적정주가](./06_valuation.md)
 - [투자 판단](./07_investment.md)
+- [최근 뉴스 / 이슈](./08_news.md)
 
 ---
 
