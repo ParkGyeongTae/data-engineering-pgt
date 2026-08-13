@@ -62,6 +62,24 @@
 > "총부채"는 부채총계(총자산 - 자기자본) 기준 — 이자부 차입금만 집계하는 협의의 부채비율(stockanalysis.com 등에서 쓰는 Debt/Equity, FY21~25 기준 0.13~0.53 수준)과는 정의가 다르므로 직접 비교 시 주의.
 > "올해" 열은 회계연도 말이 아닌 2026년 2분기(6월 30일) 10-Q 재무상태표 기준 — FY2024~2025 급증한 유동자산·총자산은 대규모 인수(Arm Artisan IP, Hexagon D&E 등) 관련 자금조달 및 2026년 상반기 Hexagon D&E 인수 완료(영업권 급증)의 영향으로 추정.
 
+### 4. 현금흐름·주주환원 지표 (연간)
+
+> `04_financials.md` §3(FCF)·§4(주주환원)와 `06_valuation.md`의 DCF 산정이 이 표를 인용한다. Cadence는 배당을 지급하지 않아(무배당) DPS·배당성향·배당수익률 행은 모두 "0"으로 채움(추세 비교용, 행 삭제하지 않음).
+
+| 항목 | FY2021 | FY2022 | FY2023 | FY2024 | FY2025 | FY2026(E) | 평균 | 중앙값 |
+|------|--------|--------|--------|--------|--------|-----------|------|--------|
+| 영업활동현금흐름 (CFO) | 1,101 | 1,242 | 1,349 | 1,261 | 1,729 | 확인 필요 (가이던스 미제시) | 1,336.4 (5개년) | 1,261.0 (5개년) |
+| 자본적지출 (CapEx) | 65 | 123 | 102 | 143 | 142 | 확인 필요 | 115.0 (5개년) | 123.0 (5개년) |
+| 잉여현금흐름 (FCF = CFO − CapEx) | 1,036 | 1,119 | 1,247 | 1,118 | 1,587 | 약 1,777 (자체 추정, 주5) | 1,221.4 (5개년) | 1,119.0 (5개년) |
+| FCF per share (FCF ÷ 발행주식수, 희석) | $3.71 | $4.07 | $4.57 | $4.08 | $5.81 | $6.45 (E, 자체 추정) | $4.45 (5개년) | $4.07 (5개년) |
+| 주당배당금 (DPS) | $0.00 | $0.00 | $0.00 | $0.00 | $0.00 | $0.00 | $0.00 | $0.00 |
+| 배당성향 (배당금 ÷ 순이익, %) | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 |
+| 배당수익률 (DPS ÷ 주가, %) | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 |
+| 자사주매입액 | 확인 필요 (주6) | 확인 필요 | 확인 필요 | 확인 필요 | 확인 필요 | 확인 필요 (2026-06-30 기준 잔여 승인 한도 $1.0B) | — | — |
+
+- (주5) FY2026(E) FCF는 회사 가이던스가 없어 `06_valuation.md`와 동일하게 FY2021~FY2025 FCF CAGR(약 11.3%)을 FY2025 실제치($1,587M)에 적용한 자체 추정치.
+- (주6) 자사주매입은 Cadence의 유일한 주주환원 수단. 2025.05 이사회가 $1.5B 추가 승인했고, 2026-06-30(2Q26) 기준 잔여 승인 한도는 $1.0B로 확인됨(10-Q). 연도별 정확한 집행 총액은 10-K 세부 확인 필요.
+
 ---
 
 ## B. 분기별 지표 (최근 6개 분기: FY2025 Q1~Q4, FY2026 Q1~Q2)
@@ -93,6 +111,18 @@
 
 ---
 
+## 관련 문서
+
+- [개요](./01_overview.md)
+- [역사 / 주요 이벤트](./02_history.md)
+- [CEO / 경영진](./03_ceo.md)
+- [재무 / 실적](./04_financials.md)
+- [밸류에이션 / 적정주가](./06_valuation.md)
+- [투자 판단](./07_investment.md)
+- [최근 뉴스 / 이슈](./08_news.md)
+
+---
+
 ## 참고 자료
 
 - [Cadence Reports Fourth Quarter and Fiscal Year 2025 Financial Results (SEC 8-K Ex-99.01, 2026-02-17)](https://www.sec.gov/Archives/edgar/data/813672/000081367226000013/cdns02172026ex9901.htm)
@@ -108,6 +138,8 @@
 - [stockanalysis.com — CDNS 재무상태표](https://stockanalysis.com/stocks/CDNS/financials/balance-sheet/)
 - [stockanalysis.com — CDNS 밸류에이션 비율](https://stockanalysis.com/stocks/CDNS/financials/ratios/)
 - [stockanalysis.com — CDNS 현재 주가/시가총액](https://stockanalysis.com/stocks/cdns/)
+- [MacroTrends — CDNS Free Cash Flow History](https://www.macrotrends.net/stocks/charts/CDNS/cadence-design-systems/free-cash-flow)
+- [financecharts.com — CDNS Share Buybacks](https://www.financecharts.com/stocks/CDNS/cash-flow/repurchase-of-capital-stock)
 
 ---
 

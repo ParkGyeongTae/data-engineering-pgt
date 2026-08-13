@@ -66,6 +66,25 @@
 > 평균/중앙값은 FY2021~FY2025 5개년 기준(2026-03-31 분기말 수치는 참고용으로 별도 열에 표시, 평균/중앙값 계산에서 제외).
 > FY2025에 자기자본이 크게 증가(€56,231M → €68,371M)한 배경은 Altair·Dotmatics 인수 관련 자본 변동, Innomotics 매각 이익 등 복합 요인으로 추정 — 세부 원인은 확인 필요.
 
+### 4. 현금흐름·주주환원 지표 (연간)
+
+> `04_financials.md` §3(FCF)·§4(주주환원)와 `06_valuation.md`의 DCF/DDM 산정이 이 표를 인용한다. Siemens는 Synopsys·Cadence와 달리 배당을 지급하는 기업(progressive dividend policy)이다.
+
+| 항목 | FY2021 | FY2022 | FY2023 | FY2024 | FY2025 | FY2026(E) | 평균 | 중앙값 |
+|------|--------|--------|--------|--------|--------|-----------|------|--------|
+| 영업활동현금흐름 (CFO) | 10,000 | 10,240 | 확인 필요 | 확인 필요 | 확인 필요 | 확인 필요 | — | — |
+| 자본적지출 (CapEx) | 1,730 | 2,080 | 확인 필요 | 확인 필요 | 확인 필요 | 확인 필요 | — | — |
+| 잉여현금흐름 (FCF) | 8,270 | 8,160 | 9,954 (주7) | 9,410 (주7) | 10,631 (주7) | 약 11,243 (E, 자체 추정, 주8) | 9,285.0 (5개년) | 9,410.0 (5개년) |
+| FCF per share (FCF ÷ 발행주식수, €) | 10.31 | 10.29 | 12.60 | 11.99 | 13.62 | 14.64 (E, 자체 추정) | 11.76 (5개년) | 11.99 (5개년) |
+| 주당배당금 (DPS, €) | 4.00 | 4.25 | 4.70 | 5.20 | 5.35 | 5.63 (E, 컨센서스) | 4.70 (5개년) | 4.70 (5개년) |
+| 배당성향 (DPS ÷ IFRS EPS, %) | 52.70 | 92.59 | 47.43 | 50.10 | 44.18 | 확인 필요 (GAAP/IFRS EPS(E) 미확정) | 57.40 (5개년) | 50.10 (5개년) |
+| 배당수익률 (DPS ÷ 주가, %) | 2.82 | 4.20 | 3.46 | 2.87 | 2.33 | 확인 필요 | 3.14 (5개년) | 2.87 (5개년) |
+| 자사주매입액 | 확인 필요 | 확인 필요 | 확인 필요 | 확인 필요 (주9) | 확인 필요 (주9) | 확인 필요 (주9) | — | — |
+
+- (주7) FY2023~FY2025 FCF(총액)는 `06_valuation.md`에 이미 계산된 FCFPS(주당) 값에 그 해 발행주식수(A.2 참조)를 곱해 역산한 값 — 별도 원자료(CFO·CapEx 분리 수치)는 확인 필요.
+- (주8) FY2026(E) FCFPS는 `06_valuation.md`가 FY2021~FY2025 FCFPS CAGR(약 7.52%)을 FY2025 실측치에 연장한 자체 추정치. 다만 2026-08-06 공시된 3분기 실적발표에서 회사는 "잉여현금흐름 €4.1bn"(9개월 누적으로 추정, 확인 필요)을 언급하며 연간 EPS 가이던스를 €10.70~11.10 → €11.20~11.50로 상향한 바 있어(`08_news.md` 참고), 이 자체 추정치와 실제 진행 상황 간 정합성은 재검토가 필요함.
+- (주9) 2024.2.12부터 시작된 최대 €6bn(최대 5년, ~2029.1) 자사주매입 프로그램이 2026.3 기준 €4.4bn 집행됐고, 2026.5.13 신규 최대 €6bn(5년) 프로그램이 추가로 발표됨(`08_news.md` 참고). 연도별 정확한 집행액은 확인 필요.
+
 ---
 
 ## B. 분기별 지표 (최근 6개 분기: FY2025 Q1 ~ FY2026 Q2)
@@ -100,6 +119,18 @@
 
 ---
 
+## 관련 문서
+
+- [개요](./01_overview.md)
+- [역사 / 주요 이벤트](./02_history.md)
+- [CEO / 경영진](./03_ceo.md)
+- [재무 / 실적](./04_financials.md)
+- [밸류에이션 / 적정주가](./06_valuation.md)
+- [투자 판단](./07_investment.md)
+- [최근 뉴스 / 이슈](./08_news.md)
+
+---
+
 ## 참고 자료
 
 - [Siemens Q4 FY2025 실적발표 (Earnings Release and Financial Results Q4 FY 2025)](https://press.siemens.com/global/en/pressrelease/earnings-release-and-financial-results-q4-fy-2025)
@@ -120,6 +151,8 @@
 - [stockanalysis.com — Siemens AG (ETR:SIE) Balance Sheet](https://stockanalysis.com/quote/etr/SIE/financials/balance-sheet/)
 - [stockanalysis.com — Siemens AG (ETR:SIE) Ratios](https://stockanalysis.com/quote/etr/SIE/financials/ratios/)
 - [stockanalysis.com — Siemens AG (ETR:SIE) Quote / 현재가](https://stockanalysis.com/quote/etr/SIE/)
+- [stockanalysis.com — Siemens AG (ETR:SIE) Cash Flow Statement](https://stockanalysis.com/quote/etr/SIE/financials/cash-flow-statement/)
+- [Siemens Q3 FY2026 실적발표 (Record third quarter – Outlook raised)](https://press.siemens.com/global/en/pressrelease/record-third-quarter-outlook-raised)
 
 ---
 
