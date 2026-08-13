@@ -59,10 +59,13 @@ Ansys 인수 발표 이후 KeyBanc(목표주가 660달러, Overweight), Piper Sa
 
 ## 관련 문서
 
-- [개요](./overview.md)
-- [역사 / 주요 이벤트](./history.md)
-- [핵심 지표](./metrics.md)
-- [밸류에이션 / 적정주가](./valuation.md)
+- [개요](./01_overview.md)
+- [역사 / 주요 이벤트](./02_history.md)
+- [재무 / 실적](./04_financials.md)
+- [핵심 지표](./05_metrics.md)
+- [밸류에이션 / 적정주가](./06_valuation.md)
+- [투자 판단](./07_investment.md)
+- [최근 뉴스 / 이슈](./08_news.md)
 
 ---
 

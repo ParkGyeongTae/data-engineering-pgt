@@ -68,6 +68,24 @@
 - FY2025부터 총부채·부채비율이 급증한 것은 Ansys 인수(2025.7 완료)에 따른 인수금융(회사채 발행 등, 총차입금 약 143억 달러)의 영향.
 - FY2024 유동비율이 유독 높은(244%) 이유는 Software Integrity 매각 대금 유입 등으로 유동자산이 일시적으로 크게 늘어난 영향으로 추정되며, 정확한 원인은 10-K 세부 확인 필요.
 
+### 4. 현금흐름·주주환원 지표 (연간)
+
+> `04_financials.md` §3(FCF)·§4(주주환원)와 `06_valuation.md`의 DCF 산정이 이 표를 인용한다.
+
+| 항목 | FY2021 | FY2022 | FY2023 | FY2024 | FY2025 | FY2026(E) | 평균 | 중앙값 |
+|------|--------|--------|--------|--------|--------|-----------|------|--------|
+| 영업활동현금흐름 (CFO) | 1,494 | 1,737 | 1,704 | 1,408 | 1,518 | 약 2,300 (가이던스) | 1,693.5 (5개년) | 1,518.0 (5개년) |
+| 자본적지출 (CapEx) | 94 | 137 | 190 | 140 | 169 | 약 300 (가이던스) | 146.0 (5개년) | 140.0 (5개년) |
+| 잉여현금흐름 (FCF = CFO − CapEx) | 1,400 | 1,600 | 1,514 | 1,268 | 1,349 | 약 2,000 (가이던스) | 1,426.2 (5개년) | 1,400.0 (5개년) |
+| FCF per share (FCF ÷ 발행주식수, 희석) | $8.90 | $10.22 | $9.76 | $8.13 | $8.14 | $10.36 (E, 주5) | $9.03 (5개년) | $8.90 (5개년) |
+| 주당배당금 (DPS) | $0.00 | $0.00 | $0.00 | $0.00 | $0.00 | $0.00 | $0.00 | $0.00 |
+| 배당성향 (배당금 ÷ 순이익, %) | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 |
+| 배당수익률 (DPS ÷ 주가, %) | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 |
+| 자사주매입액 | 확인 필요 (주6) | 확인 필요 (주6) | 확인 필요 (주6) | 확인 필요 | 확인 필요 | 확인 필요 (FY2026 Q1 $144.6M + Q2 $223.3M만 확인, 연간 미확정) | — | — |
+
+- (주5) CFO·CapEx·FCF는 stockanalysis.com 현금흐름표(연결 기준) 및 회사 실적발표 자료 기준. FY2026(E)은 2026-05-27 2분기 실적 발표에서 상향된 가이던스(CFO 약 $2.3B, CapEx 약 $300M → FCF 약 $2.0B) 인용. FCF per share(E)는 FY2026 Q2 기준 희석주식수(약 192.3백만주)로 나눈 값.
+- (주6) Synopsys는 배당을 지급하지 않고 자사주매입을 주된 주주환원 수단으로 삼음. 연도별 정확한 연간 자사주매입 총액은 10-K 상세 확인이 필요 — SEC 8-K 공시상 개별 ASR(가속 자사주매입) 계약 사례로 2021.12 $200M(HSBC) + $1B 매입 승인, 2023.2 $300M(BofA) + 2023.5 $300M(Mizuho) 등이 확인되나 연간 총액으로 집계된 수치는 아님. FY2026 Q1·Q2는 실적발표 자료 기준 각각 $144.6M, $223.3M 집행.
+
 ---
 
 ## B. 분기별 지표 (최근 6개 분기: FY2025 Q1~Q4, FY2026 Q1~Q2)
@@ -100,6 +118,18 @@
 
 ---
 
+## 관련 문서
+
+- [개요](./01_overview.md)
+- [역사 / 주요 이벤트](./02_history.md)
+- [CEO / 경영진](./03_ceo.md)
+- [재무 / 실적](./04_financials.md)
+- [밸류에이션 / 적정주가](./06_valuation.md)
+- [투자 판단](./07_investment.md)
+- [최근 뉴스 / 이슈](./08_news.md)
+
+---
+
 ## 참고 자료
 
 - [Synopsys Posts Financial Results for Fourth Quarter and Fiscal Year 2025 (2025.12.10)](https://news.synopsys.com/2025-12-10-Synopsys-Posts-Financial-Results-for-Fourth-Quarter-and-Fiscal-Year-2025)
@@ -119,6 +149,7 @@
 - [stockanalysis.com — SNPS Price History](https://stockanalysis.com/stocks/snps/history/)
 - [macrotrends.net — SNPS EPS](https://www.macrotrends.net/stocks/charts/SNPS/synopsys/eps-earnings-per-share-diluted)
 - [macrotrends.net — SNPS Market Cap / Stock Value](https://www.macrotrends.net/stocks/charts/SNPS/synopsys/market-value)
+- [financecharts.com — SNPS Share Buybacks](https://www.financecharts.com/stocks/SNPS/cash-flow/repurchase-of-capital-stock)
 
 ---
 
