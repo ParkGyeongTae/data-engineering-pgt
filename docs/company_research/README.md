@@ -22,11 +22,14 @@ company_research/
 │   ├── metrics.md
 │   ├── valuation.md
 │   └── investment.md
+├── _sector_comparison_template.md   # 섹터 내 2개사 이상 커버 시 <sector>/comparison.md로 복사해 쓰는 템플릿
 ├── electronic_design_automation/   # 섹터 폴더명은 풀어 쓴 소문자 스네이크케이스
+│   ├── comparison.md    # (선택) 섹터 내 회사 비교 — 2개사 이상일 때만
 │   ├── synopsys/
 │   ├── cadence_design_systems/
 │   └── siemens/
 └── <sector>/
+    ├── comparison.md
     └── <company-name>/
         └── ...
 ```
@@ -46,13 +49,15 @@ company_research/
 | `history.md` | 창업부터 현재까지의 연혁·주요 이벤트 | 선택 |
 | `ceo.md` | CEO/경영진 이력, 경영 스타일, 보상·지분, 시장 평가 | 선택 |
 | `financials.md` | 성장성·수익성·재무건전성·주주환원에 대한 **서술형 해석**. 숫자는 `metrics.md`를 인용만 하고 여기서 새로 표를 만들지 않는다 | 선택 |
-| `metrics.md` | 최근 5개년+올해(연간) / 최근 6개 분기의 매출·영업이익·PER·유동비율·부채비율·증감액·증감률 등 **원자료 수치표** (평균·중앙값 비교용). 회사 관련 모든 문서가 참조하는 단일 출처(source of truth) | 선택 |
-| `valuation.md` | PER/PBR/DCF/DDM 등 방법론별 적정주가 산정과 근거·가정·민감도 | 선택 |
+| `metrics.md` | 최근 5개년+올해(연간) / 최근 6개 분기의 매출·영업이익·PER·PBR·유동비율·부채비율·FCF·배당(DPS) 등 **원자료 수치표** (평균·중앙값 비교용). 회사 관련 모든 문서가 참조하는 단일 출처(source of truth) | 선택 |
+| `valuation.md` | PER/PBR/DCF/DDM 등 방법론별 적정주가 산정과 근거·가정·민감도. EPS·BPS·DPS 등은 `metrics.md`를 인용 | 선택 |
 | `investment.md` | 투자 포인트(강점)·리스크·경쟁 해자·**투자 결론**. 밸류에이션 숫자는 `valuation.md`를 요약 인용만 한다 | 선택 |
 | `news.md` | 최근 뉴스·이슈·실적 발표 등 시점성 메모. `_template/`에는 없음 — 필요할 때 회사 폴더에 직접 만들어 쓰는 자유 양식 | 선택 |
+| `<sector>/comparison.md` | 같은 섹터 내 커버리지 기업 간 사업 포지셔닝·밸류에이션 비교와 종합 순위. `_sector_comparison_template.md`를 복사해서 씀 | 선택 (섹터 내 2개사 이상일 때 권장) |
 
 > 회사마다 파일을 **똑같은 이름**으로 유지하면, 나중에 회사 간 비교가 쉬워집니다.
-> `metrics.md`가 원자료의 유일한 출처입니다. `financials.md`·`valuation.md`·`investment.md`는 숫자를 다시 채우지 말고 `metrics.md` 값을 인용해 해석만 쓰세요.
+> `metrics.md`가 원자료의 유일한 출처입니다. `financials.md`·`valuation.md`·`investment.md`는 숫자를 다시 채우지 말고 `metrics.md` 값을 인용해 해석만 쓰세요. `valuation.md`에서 미래 추정치(E)처럼 `metrics.md`에 아직 없는 값을 쓸 때만 그 문서에 직접 근거를 남기고, 확정치는 항상 `metrics.md`로 되돌아가 채우세요.
+> 같은 폴더의 다른 문서들은 서로 전부 링크하는 것(풀 메시)이 기본값입니다 — 없는 문서만 링크에서 빼세요.
 
 ---
 
@@ -75,6 +80,9 @@ cp -r docs/company_research/_template docs/company_research/<sector>/<company-na
 
 # 2. 파일 내용 채우기
 # 3. 필요 없는 파일은 삭제 (overview.md는 유지 권장)
+
+# 4. 같은 섹터에 회사가 2개 이상이면 비교 문서도 추가
+cp docs/company_research/_sector_comparison_template.md docs/company_research/<sector>/comparison.md
 ```
 
 ---
