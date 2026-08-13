@@ -14,6 +14,7 @@
 ```
 company_research/
 ├── README.md            # (이 파일) 공통 규칙
+├── glossary.md           # PER/PBR/DCF/WACC 등 문서 전반에서 쓰는 용어 정리
 ├── _template/            # 새 회사/섹터 추가 시 복사해서 쓰는 템플릿 모음
 │   ├── company/          # 회사 폴더에 복사하는 템플릿
 │   │   ├── overview.md
@@ -60,6 +61,7 @@ company_research/
 > 회사마다 파일을 **똑같은 이름**으로 유지하면, 나중에 회사 간 비교가 쉬워집니다.
 > `metrics.md`가 원자료의 유일한 출처입니다. `financials.md`·`valuation.md`·`investment.md`는 숫자를 다시 채우지 말고 `metrics.md` 값을 인용해 해석만 쓰세요. `valuation.md`에서 미래 추정치(E)처럼 `metrics.md`에 아직 없는 값을 쓸 때만 그 문서에 직접 근거를 남기고, 확정치는 항상 `metrics.md`로 되돌아가 채우세요.
 > 같은 폴더의 다른 문서들은 서로 전부 링크하는 것(풀 메시)이 기본값입니다 — 없는 문서만 링크에서 빼세요.
+> PER·PBR·DCF·WACC·%p 등 용어가 낯설면 [`glossary.md`](./glossary.md)를 먼저 보세요.
 
 ---
 
