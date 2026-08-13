@@ -4,6 +4,8 @@
 "이 회사에 투자할 만한가?"를 스스로 정리하는 것이 목적이며, 개발/기술 스택 조사는 다루지 않습니다.
 
 > ⚠️ 여기 정리된 내용은 개인 학습·기록용이며 투자 권유가 아닙니다. 투자 판단과 책임은 본인에게 있습니다.
+>
+> 커버리지는 **미국 상장 기업(NYSE/NASDAQ, USD 표시) 위주**를 기본 전제로 합니다. 템플릿의 재무·거버넌스 용어(GAAP/Non-GAAP, 위임장(Proxy Statement) 등)도 이 전제 위에서 작성되어 있습니다 — 비-US 기업을 예외적으로 다룰 경우 해당 용어를 그 회사 문서 안에서 직접 치환하고 각주로 남기세요(예: GAAP→IFRS, 위임장→Compensation Report).
 
 ---
 
@@ -38,7 +40,7 @@ company_research/
 ```
 
 - 섹터 폴더명: **풀어 쓴 소문자 스네이크케이스** (예: `electronic_design_automation`, `semiconductor`, `cloud_infrastructure`) — 약어보다 명확한 전체 표기 우선
-- 회사 폴더명: **회사명 소문자 스네이크케이스** (예: `synopsys`, `nvidia`, `samsung_electronics`)
+- 회사 폴더명: **회사명 소문자 스네이크케이스** (예: `synopsys`, `nvidia`, `apple`)
 - 복합기업은 "관심 이유"가 되는 사업 기준 섹터에 배치 (예: Siemens → `electronic_design_automation/`)
 - 처음엔 `overview.md`만 있어도 됨. 분석이 깊어지면 아래 표대로 분리.
 
