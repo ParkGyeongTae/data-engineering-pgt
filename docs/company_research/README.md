@@ -17,10 +17,12 @@ company_research/
 ├── _template/           # 새 회사 추가 시 복사해서 쓰는 템플릿
 │   ├── overview.md
 │   ├── history.md
+│   ├── ceo.md
 │   ├── financials.md
 │   ├── metrics.md
+│   ├── valuation.md
 │   └── investment.md
-├── eda/                 # EDA (Electronic Design Automation)
+├── electronic_design_automation/   # 섹터 폴더명은 풀어 쓴 소문자 스네이크케이스
 │   ├── synopsys/
 │   ├── cadence_design_systems/
 │   └── siemens/
@@ -29,9 +31,9 @@ company_research/
         └── ...
 ```
 
-- 섹터 폴더명: **소문자 케밥케이스** (예: `eda`, `semiconductor`, `cloud`)
+- 섹터 폴더명: **풀어 쓴 소문자 스네이크케이스** (예: `electronic_design_automation`, `semiconductor`, `cloud_infrastructure`) — 약어보다 명확한 전체 표기 우선
 - 회사 폴더명: **회사명 소문자 스네이크케이스** (예: `synopsys`, `nvidia`, `samsung_electronics`)
-- 복합기업은 "관심 이유"가 되는 사업 기준 섹터에 배치 (예: Siemens → `eda/`)
+- 복합기업은 "관심 이유"가 되는 사업 기준 섹터에 배치 (예: Siemens → `electronic_design_automation/`)
 - 처음엔 `overview.md`만 있어도 됨. 분석이 깊어지면 아래 표대로 분리.
 
 ---
@@ -42,12 +44,15 @@ company_research/
 |--------|-----------|-----------|
 | `overview.md` | 회사 개요, 사업 모델(**어떻게 돈을 버는가**), 산업 내 위치 | ✅ 필수 |
 | `history.md` | 창업부터 현재까지의 연혁·주요 이벤트 | 선택 |
-| `financials.md` | 매출·이익·성장률·재무건전성·현금흐름 등에 대한 **서술형** 분석 | 선택 |
-| `metrics.md` | 최근 5개년+올해(연간) / 최근 6개 분기의 매출·영업이익·PER·유동비율·부채비율·증감액·증감률 등 **원자료 수치표** (평균·중앙값 비교용) | 선택 |
-| `investment.md` | 투자 포인트(강점)·리스크·경쟁 해자·밸류에이션·**투자 결론** | 선택 |
-| `news.md` | 최근 뉴스·이슈·실적 발표 등 시점성 메모 | 선택 |
+| `ceo.md` | CEO/경영진 이력, 경영 스타일, 보상·지분, 시장 평가 | 선택 |
+| `financials.md` | 성장성·수익성·재무건전성·주주환원에 대한 **서술형 해석**. 숫자는 `metrics.md`를 인용만 하고 여기서 새로 표를 만들지 않는다 | 선택 |
+| `metrics.md` | 최근 5개년+올해(연간) / 최근 6개 분기의 매출·영업이익·PER·유동비율·부채비율·증감액·증감률 등 **원자료 수치표** (평균·중앙값 비교용). 회사 관련 모든 문서가 참조하는 단일 출처(source of truth) | 선택 |
+| `valuation.md` | PER/PBR/DCF/DDM 등 방법론별 적정주가 산정과 근거·가정·민감도 | 선택 |
+| `investment.md` | 투자 포인트(강점)·리스크·경쟁 해자·**투자 결론**. 밸류에이션 숫자는 `valuation.md`를 요약 인용만 한다 | 선택 |
+| `news.md` | 최근 뉴스·이슈·실적 발표 등 시점성 메모. `_template/`에는 없음 — 필요할 때 회사 폴더에 직접 만들어 쓰는 자유 양식 | 선택 |
 
 > 회사마다 파일을 **똑같은 이름**으로 유지하면, 나중에 회사 간 비교가 쉬워집니다.
+> `metrics.md`가 원자료의 유일한 출처입니다. `financials.md`·`valuation.md`·`investment.md`는 숫자를 다시 채우지 말고 `metrics.md` 값을 인용해 해석만 쓰세요.
 
 ---
 
